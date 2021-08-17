@@ -24,7 +24,7 @@
 		border-radius: 100%;
 		width: 30vw;
 		height: 30vw;
-		z-index: -1;
+		z-index: -100;
 		animation: bo 2s infinite linear alternate;
 	}
 
