@@ -1,11 +1,10 @@
 <script>
-	import Description from './Description.svelte';
+	import Router from './routes/index.svelte';
 	export let name;
 </script>
 
 <main>
-	<h1>deleting the in-between / WHAT ARE YOU DOING HERE</h1>
-	<Description />
+	<Router />
 	<div class="circle" id="circle1" />
 	<div class="circle" id="circle2" />
 </main>
@@ -17,12 +16,6 @@
 		max-width: 240px;
 		margin: 0 auto;
 		z-index: 100;
-	}
-
-	h1 {
-		color: blue;
-		font-size: 4em;
-		font-weight: 100;
 	}
 
 	.circle {

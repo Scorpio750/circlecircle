@@ -1,4 +1,5 @@
 <script>
+	import { link } from 'svelte-routing';
 	const projects = [
 		{
 			name: "The Sketchbook Project",
@@ -15,8 +16,14 @@
 			description: "cHecK oUT mY sOunDCL0ud!! hahA it's ok I guess but it could be better,,,",
 			link: "http://circlecircle.studio/starberry",
 		},
+		{
+			name: "Betty",
+			description: "these are completed pages of a repurposed quad notebook that I halved over time. named after a dear friend who is no longer with us.",
+		},
 	];
 </script>
+
+<h1>deleting the in-between / WHAT ARE YOU DOING HERE</h1>
 <section>
 	<p>setting up my own website is very time consuming and I'm pretty much exhausted all the time.</p>
 
@@ -32,9 +39,11 @@
 	<p>for now, check out some stuff I did, or tried to do:</p>
 	{#each projects as project}
 	<li>
-		<a target="_blank" href={project.link}>
-			{project.name}
-		</a>
+		{#if project.name === "Betty" || project.name === "chananigans"}
+		<a href={project.name.toLowerCase()} use:link>{project.name}</a>
+		{:else}
+		<a target="_blank" href={project.link}>{project.name}</a>
+		{/if}
 		- {project.description}
 	</li>
 	{/each}
@@ -42,16 +51,23 @@
 </section>
 
 <style>
-	a {
+	h1 {
+		color: blue;
+		font-size: 4em;
+		font-weight: 100;
+	}
+
+	li {
+			margin: 10px;
+	}
+
+ a {
+		padding:3px 5px;
 		color: white;
-		background-color: black;
+		background-color: deepskyblue;
 	}
 	a:hover {
 		color: black;
 		background-color: white;
-	}
-
-	project {
-		font-family: monospace;
 	}
 </style>
