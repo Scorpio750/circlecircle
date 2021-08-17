@@ -23,34 +23,56 @@
 	];
 </script>
 
-<h1>deleting the in-between / WHAT ARE YOU DOING HERE</h1>
-<section>
-	<p>setting up my own website is very time consuming and I'm pretty much exhausted all the time.</p>
+<div id="main-container">
+	<section id="description-section">
+		<header>
+			<h1>deleting the in-between / WHAT ARE YOU DOING HERE</h1>
+		</header>
+		<p>setting up my own website is very time consuming and I'm pretty much exhausted all the time.</p>
 
-	<p>I have better things to do like overshare on
-		<a href="https://www.facebook.com/facebo/">Facebook</a>
-	</p>
+		<p>I have better things to do like overshare on
+			<a href="https://www.facebook.com/facebo/">Facebook</a>
+		</p>
 
-	<p>knowing me, this thing will forever be under construction - so i forced this
-	<a href="https://syncretik.co">shit-eating goblin</a>
-	to make it for me</p>
+		<p>knowing me, this thing will forever be under construction - so i forced this
+		<a href="https://syncretik.co">shit-eating goblin</a>
+		to make it for me</p>
 
 
-	<p>for now, check out some stuff I did, or tried to do:</p>
-	{#each projects as project}
-	<li>
-		{#if project.name === "Betty" || project.name === "chananigans"}
-		<a href={project.name.toLowerCase()} use:link>{project.name}</a>
-		{:else}
-		<a target="_blank" href={project.link}>{project.name}</a>
-		{/if}
-		- {project.description}
-	</li>
-	{/each}
+		<p>for now, check out some stuff I did, or tried to do:</p>
+		{#each projects as project}
+		<li>
+			{#if project.name === "Betty" || project.name === "chananigans"}
+			<a href={project.name.toLowerCase()} use:link>{project.name}</a>
+			{:else}
+			<a target="_blank" href={project.link}>{project.name}</a>
+			{/if}
+			- {project.description}
+		</li>
+		{/each}
 
-</section>
+	</section>
+	<section id="black-block">
+		<footer>
+			Built by Syncretik 2021, All Rights Reserved.
+		</footer>
+	</section>
+</div>
 
 <style>
+	#main-container {
+		height: 100vh;
+		display: grid;
+		grid-template-columns: repeat(8, minmax(10px, 1fr));
+		grid-template-rows: repeat(8, minmax(10px, 1fr));
+	}
+
+	#description-section {
+		margin: 0 2rem;
+		grid-column: 1 / span 5;
+		grid-row: 1 / span 8;
+	}
+
 	h1 {
 		color: blue;
 		font-size: 4em;
@@ -70,4 +92,22 @@
 		color: black;
 		background-color: white;
 	}
+
+	#black-block {
+		grid-column: 6 / span 3;
+		grid-row: 1 / span 8;
+		display: flex;
+		align-items: flex-end;
+		background-color: black;
+		z-index: -1;
+	}
+
+  footer {
+		flex: 1 0 10%;
+		padding: 1rem;
+		font-weight: 900;
+		display: flex;
+		justify-content: flex-end;
+	}
+
 </style>
