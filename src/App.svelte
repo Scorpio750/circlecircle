@@ -12,6 +12,7 @@
 
 <style>
 	main {
+		display: grid;
 		padding: 1em;
 		max-width: 240px;
 		margin: 0 auto;
@@ -31,7 +32,9 @@
 		width: 30vw;
 		height: 30vw;
 		z-index: -1;
+		animation: bo 2s infinite linear alternate;
 	}
+
 	#circle1 {
 		top: 0;
 	}
@@ -39,7 +42,6 @@
 	#circle2 {
 		top: 20vh;
 		left: 20vw;
-
 	}
 
 	@media (min-width: 640px) {
