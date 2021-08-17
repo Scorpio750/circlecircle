@@ -8,14 +8,25 @@
 	<div class="circle" id="circle1" />
 	<div class="circle" id="circle2" />
 </main>
+	<footer>
+		Built by Syncretik 2021, All Rights Reserved.
+	</footer>
 
 <style>
 	main {
-		display: grid;
-		padding: 1em;
-		max-width: 240px;
 		margin: 0 auto;
 		z-index: 100;
+		height: 90vh;
+		width: 100vw;
+	}
+
+	footer {
+		flex-basis: 10%;
+		padding: 1rem 0;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-end;
+		font-weight: 900;
 	}
 
 	.circle {
@@ -29,12 +40,13 @@
 	}
 
 	#circle1 {
-		top: 0;
+		top: 10vh;
+		left: 10vw;
 	}
 
 	#circle2 {
-		top: 20vh;
-		left: 20vw;
+		top: 25vh;
+		left: 25vw;
 	}
 
 	@media (min-width: 640px) {

@@ -2529,7 +2529,7 @@ var app = (function () {
     			button = element("button");
     			button.textContent = "Back";
     			attr_dev(button, "id", "back-btn");
-    			attr_dev(button, "class", "svelte-1pd5lvc");
+    			attr_dev(button, "class", "svelte-1nshsuj");
     			add_location(button, file$2, 15, 13, 476);
     		},
     		m: function mount(target, anchor) {
@@ -2596,22 +2596,22 @@ var app = (function () {
     			t5 = space();
     			create_component(link.$$.fragment);
     			attr_dev(div, "id", "black-cover");
-    			attr_dev(div, "class", "svelte-1pd5lvc");
+    			attr_dev(div, "class", "svelte-1nshsuj");
     			add_location(div, file$2, 10, 0, 228);
     			attr_dev(span, "id", "meme-btn");
-    			attr_dev(span, "class", "svelte-1pd5lvc");
+    			attr_dev(span, "class", "svelte-1nshsuj");
     			add_location(span, file$2, 13, 18, 301);
-    			attr_dev(h20, "class", "svelte-1pd5lvc");
+    			attr_dev(h20, "class", "svelte-1nshsuj");
     			add_location(h20, file$2, 13, 0, 283);
     			if (!src_url_equal(img.src, img_src_value = "https://nyc3.digitaloceanspaces.com/circlecircle.studio/mtahearts.jpeg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "boobooboo");
-    			attr_dev(img, "class", "svelte-1pd5lvc");
+    			attr_dev(img, "class", "svelte-1nshsuj");
     			add_location(img, file$2, 14, 1, 364);
-    			attr_dev(h21, "class", "svelte-1pd5lvc");
+    			attr_dev(h21, "class", "svelte-1nshsuj");
     			add_location(h21, file$2, 12, 14, 278);
-    			attr_dev(h22, "class", "svelte-1pd5lvc");
+    			attr_dev(h22, "class", "svelte-1nshsuj");
     			add_location(h22, file$2, 12, 1, 265);
-    			attr_dev(main, "class", "svelte-1pd5lvc");
+    			attr_dev(main, "class", "svelte-1nshsuj");
     			add_location(main, file$2, 11, 0, 257);
     		},
     		l: function claim(nodes) {
@@ -2972,6 +2972,8 @@ var app = (function () {
     	let div0;
     	let t1;
     	let div1;
+    	let t2;
+    	let footer;
     	let current;
     	router = new Routes({ $$inline: true });
 
@@ -2983,14 +2985,19 @@ var app = (function () {
     			div0 = element("div");
     			t1 = space();
     			div1 = element("div");
-    			attr_dev(div0, "class", "circle svelte-1ll20ax");
+    			t2 = space();
+    			footer = element("footer");
+    			footer.textContent = "Built by Syncretik 2021, All Rights Reserved.";
+    			attr_dev(div0, "class", "circle svelte-1kqnie7");
     			attr_dev(div0, "id", "circle1");
     			add_location(div0, file, 7, 1, 103);
-    			attr_dev(div1, "class", "circle svelte-1ll20ax");
+    			attr_dev(div1, "class", "circle svelte-1kqnie7");
     			attr_dev(div1, "id", "circle2");
     			add_location(div1, file, 8, 1, 140);
-    			attr_dev(main, "class", "svelte-1ll20ax");
+    			attr_dev(main, "class", "svelte-1kqnie7");
     			add_location(main, file, 5, 0, 83);
+    			attr_dev(footer, "class", "svelte-1kqnie7");
+    			add_location(footer, file, 10, 1, 185);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3002,6 +3009,8 @@ var app = (function () {
     			append_dev(main, div0);
     			append_dev(main, t1);
     			append_dev(main, div1);
+    			insert_dev(target, t2, anchor);
+    			insert_dev(target, footer, anchor);
     			current = true;
     		},
     		p: noop,
@@ -3017,6 +3026,8 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(main);
     			destroy_component(router);
+    			if (detaching) detach_dev(t2);
+    			if (detaching) detach_dev(footer);
     		}
     	};
 

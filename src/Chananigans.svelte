@@ -58,7 +58,7 @@
 	#back-btn {
 		position: absolute;
 		left: 3vh;
-		top: 2vh;
-		font-size: 14px;
+		bottom: 1vh;
+		font-size: 18px;
 	}
 </style>
