@@ -3,6 +3,8 @@
 	export let name;
 </script>
 
+<link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>
+
 <main>
 	<Router />
 	<div class="circle" id="circle1" />
