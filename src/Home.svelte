@@ -40,6 +40,9 @@
 
 
 		<p>for now, check out some stuff I did, or tried to do:</p>
+
+		<div id="horizontal-spacer" />
+
 		{#each projects as project}
 		<li>
 			{#if project.name === "Betty" || project.name === "chananigans"}
@@ -54,7 +57,7 @@
 	</section>
 	<section id="black-block">
 		<footer>
-			Built by Syncretik 2021, All Rights Reserved.
+			Built by <a href="https://syncretik.co">[Syncretik]</a> 2021, All Rights Reserved.
 		</footer>
 	</section>
 </div>
@@ -79,8 +82,14 @@
 		font-weight: 100;
 	}
 
+	p {
+		font-size: 20px;
+	}
+
 	li {
-			margin: 10px;
+		font-size: 18px;
+		margin: 10px;
+		list-style-type: armenian;
 	}
 
  a {
@@ -93,13 +102,48 @@
 		background-color: white;
 	}
 
+	#horizontal-spacer {
+		margin: 3rem 0;
+		width: 8rem;
+		height: 2rem;
+		background-color: black;
+	}
+
+	@media (max-width: 767px) {
+		#main-container {
+			display: inline-block;
+		}
+
+		header {
+			font-size: 10px;
+		}
+
+		#horizontal-spacer {
+			width: 40vw;
+			background-color: yellow;
+		}
+
+		#black-block {
+			display: none !important;
+		}
+	}
+
 	#black-block {
 		grid-column: 6 / span 3;
 		grid-row: 1 / span 8;
 		display: flex;
 		align-items: flex-end;
 		background-color: black;
-		z-index: -1;
+		z-index: -0;
+	}
+	#black-block a {
+		padding: 0 5px;
+		text-decoration: none;
+		background-color: inherit;
+		color: dimgrey;
+	}
+	#black-block a:hover {
+		color: grey;
 	}
 
   footer {

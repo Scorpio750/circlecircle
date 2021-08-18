@@ -1,24 +1,38 @@
 <script>
+	import { tweened } from 'svelte/motion';
+	import { cubicOut } from 'svelte/easing';
 	import { Link } from 'svelte-routing';
+	import { onMount } from 'svelte';
+
 	const handleClick = e => {
 		e.preventDefault();
 		const img = document.getElementsByTagName('img')[0];
-		console.log(img.style.opacity);
 		img.style.opacity = 1;
 	};
+
+	const progress = tweened(0, {
+		duration: 400,
+		easing: cubicOut
+	});
+
+	onMount(async () => {
+
+	});
 </script>
+
+<link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>
 
 <div id="black-cover"></div>
 <main>
 	<h2>hey, kid.<h2>
-<h2>You want some <span on:click={handleClick} id="meme-btn">memes?</span></h2>
+	<h2>You want some <span on:click={handleClick} id="meme-btn">memes?</span></h2>
 	<img src="https://nyc3.digitaloceanspaces.com/circlecircle.studio/mtahearts.jpeg" alt="boobooboo">
-<Link to="/"><button id="back-btn">Back</button></Link>
+	<Link to="/"><button id="back-btn">Back</button></Link>
 </main>
 
 <style>
 	h2 {
-		font-family: "Poppins", sans-serif;
+		font-family: 'Barrio';
 	}
 
 	#black-cover {
@@ -60,5 +74,6 @@
 		left: 3vh;
 		bottom: 1vh;
 		font-size: 18px;
+		font-family: sans-serif;
 	}
 </style>

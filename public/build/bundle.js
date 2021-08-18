@@ -4,6 +4,7 @@ var app = (function () {
     'use strict';
 
     function noop() { }
+    const identity = x => x;
     function assign(tar, src) {
         // @ts-ignore
         for (const k in src)
@@ -119,6 +120,41 @@ var app = (function () {
     }
     function action_destroyer(action_result) {
         return action_result && is_function(action_result.destroy) ? action_result.destroy : noop;
+    }
+
+    const is_client = typeof window !== 'undefined';
+    let now = is_client
+        ? () => window.performance.now()
+        : () => Date.now();
+    let raf = is_client ? cb => requestAnimationFrame(cb) : noop;
+
+    const tasks = new Set();
+    function run_tasks(now) {
+        tasks.forEach(task => {
+            if (!task.c(now)) {
+                tasks.delete(task);
+                task.f();
+            }
+        });
+        if (tasks.size !== 0)
+            raf(run_tasks);
+    }
+    /**
+     * Creates a new task that runs on each raf frame
+     * until it returns a falsy value or is aborted
+     */
+    function loop(callback) {
+        let task;
+        if (tasks.size === 0)
+            raf(run_tasks);
+        return {
+            promise: new Promise(fulfill => {
+                tasks.add(task = { c: callback, f: fulfill });
+            }),
+            abort() {
+                tasks.delete(task);
+            }
+        };
     }
     function append(target, node) {
         target.appendChild(node);
@@ -323,12 +359,6 @@ var app = (function () {
             block.o(local);
         }
     }
-
-    const globals = (typeof window !== 'undefined'
-        ? window
-        : typeof globalThis !== 'undefined'
-            ? globalThis
-            : global);
 
     function get_spread_update(levels, updates) {
         const update = {};
@@ -2194,7 +2224,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (47:3) {:else}
+    // (50:3) {:else}
     function create_else_block(ctx) {
     	let a;
     	let t_value = /*project*/ ctx[1].name + "";
@@ -2206,8 +2236,8 @@ var app = (function () {
     			t = text(t_value);
     			attr_dev(a, "target", "_blank");
     			attr_dev(a, "href", /*project*/ ctx[1].link);
-    			attr_dev(a, "class", "svelte-mm5nu6");
-    			add_location(a, file$4, 47, 3, 1618);
+    			attr_dev(a, "class", "svelte-inwp07");
+    			add_location(a, file$4, 50, 3, 1653);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -2223,14 +2253,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(47:3) {:else}",
+    		source: "(50:3) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (45:3) {#if project.name === "Betty" || project.name === "chananigans"}
+    // (48:3) {#if project.name === "Betty" || project.name === "chananigans"}
     function create_if_block(ctx) {
     	let a;
     	let t_value = /*project*/ ctx[1].name + "";
@@ -2243,8 +2273,8 @@ var app = (function () {
     			a = element("a");
     			t = text(t_value);
     			attr_dev(a, "href", /*project*/ ctx[1].name.toLowerCase());
-    			attr_dev(a, "class", "svelte-mm5nu6");
-    			add_location(a, file$4, 45, 3, 1539);
+    			attr_dev(a, "class", "svelte-inwp07");
+    			add_location(a, file$4, 48, 3, 1574);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -2267,14 +2297,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(45:3) {#if project.name === \\\"Betty\\\" || project.name === \\\"chananigans\\\"}",
+    		source: "(48:3) {#if project.name === \\\"Betty\\\" || project.name === \\\"chananigans\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (43:2) {#each projects as project}
+    // (46:2) {#each projects as project}
     function create_each_block(ctx) {
     	let li;
     	let t0;
@@ -2297,8 +2327,8 @@ var app = (function () {
     			t0 = text("\n\t\t\t- ");
     			t1 = text(t1_value);
     			t2 = space();
-    			attr_dev(li, "class", "svelte-mm5nu6");
-    			add_location(li, file$4, 43, 2, 1463);
+    			attr_dev(li, "class", "svelte-inwp07");
+    			add_location(li, file$4, 46, 2, 1498);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -2320,7 +2350,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(43:2) {#each projects as project}",
+    		source: "(46:2) {#each projects as project}",
     		ctx
     	});
 
@@ -2328,7 +2358,7 @@ var app = (function () {
     }
 
     function create_fragment$4(ctx) {
-    	let div;
+    	let div1;
     	let section0;
     	let header;
     	let h1;
@@ -2346,9 +2376,14 @@ var app = (function () {
     	let t10;
     	let p3;
     	let t12;
+    	let div0;
     	let t13;
+    	let t14;
     	let section1;
     	let footer;
+    	let t15;
+    	let a2;
+    	let t17;
     	let each_value = /*projects*/ ctx[0];
     	validate_each_argument(each_value);
     	let each_blocks = [];
@@ -2359,7 +2394,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div = element("div");
+    			div1 = element("div");
     			section0 = element("section");
     			header = element("header");
     			h1 = element("h1");
@@ -2382,46 +2417,62 @@ var app = (function () {
     			p3 = element("p");
     			p3.textContent = "for now, check out some stuff I did, or tried to do:";
     			t12 = space();
+    			div0 = element("div");
+    			t13 = space();
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			t13 = space();
+    			t14 = space();
     			section1 = element("section");
     			footer = element("footer");
-    			footer.textContent = "Built by Syncretik 2021, All Rights Reserved.";
-    			attr_dev(h1, "class", "svelte-mm5nu6");
+    			t15 = text("Built by ");
+    			a2 = element("a");
+    			a2.textContent = "[Syncretik]";
+    			t17 = text(" 2021, All Rights Reserved.");
+    			attr_dev(h1, "class", "svelte-inwp07");
     			add_location(h1, file$4, 28, 3, 914);
+    			attr_dev(header, "class", "svelte-inwp07");
     			add_location(header, file$4, 27, 2, 902);
+    			attr_dev(p0, "class", "svelte-inwp07");
     			add_location(p0, file$4, 30, 2, 987);
     			attr_dev(a0, "href", "https://www.facebook.com/facebo/");
-    			attr_dev(a0, "class", "svelte-mm5nu6");
+    			attr_dev(a0, "class", "svelte-inwp07");
     			add_location(a0, file$4, 33, 3, 1141);
+    			attr_dev(p1, "class", "svelte-inwp07");
     			add_location(p1, file$4, 32, 2, 1090);
     			attr_dev(a1, "href", "https://syncretik.co");
-    			attr_dev(a1, "class", "svelte-mm5nu6");
+    			attr_dev(a1, "class", "svelte-inwp07");
     			add_location(a1, file$4, 37, 2, 1289);
+    			attr_dev(p2, "class", "svelte-inwp07");
     			add_location(p2, file$4, 36, 2, 1207);
+    			attr_dev(p3, "class", "svelte-inwp07");
     			add_location(p3, file$4, 41, 2, 1371);
+    			attr_dev(div0, "id", "horizontal-spacer");
+    			attr_dev(div0, "class", "svelte-inwp07");
+    			add_location(div0, file$4, 43, 2, 1434);
     			attr_dev(section0, "id", "description-section");
-    			attr_dev(section0, "class", "svelte-mm5nu6");
+    			attr_dev(section0, "class", "svelte-inwp07");
     			add_location(section0, file$4, 26, 1, 865);
-    			attr_dev(footer, "class", "svelte-mm5nu6");
-    			add_location(footer, file$4, 55, 2, 1773);
+    			attr_dev(a2, "href", "https://syncretik.co");
+    			attr_dev(a2, "class", "svelte-inwp07");
+    			add_location(a2, file$4, 59, 12, 1829);
+    			attr_dev(footer, "class", "svelte-inwp07");
+    			add_location(footer, file$4, 58, 2, 1808);
     			attr_dev(section1, "id", "black-block");
-    			attr_dev(section1, "class", "svelte-mm5nu6");
-    			add_location(section1, file$4, 54, 1, 1744);
-    			attr_dev(div, "id", "main-container");
-    			attr_dev(div, "class", "svelte-mm5nu6");
-    			add_location(div, file$4, 25, 0, 838);
+    			attr_dev(section1, "class", "svelte-inwp07");
+    			add_location(section1, file$4, 57, 1, 1779);
+    			attr_dev(div1, "id", "main-container");
+    			attr_dev(div1, "class", "svelte-inwp07");
+    			add_location(div1, file$4, 25, 0, 838);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
-    			append_dev(div, section0);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, section0);
     			append_dev(section0, header);
     			append_dev(header, h1);
     			append_dev(section0, t1);
@@ -2438,14 +2489,19 @@ var app = (function () {
     			append_dev(section0, t10);
     			append_dev(section0, p3);
     			append_dev(section0, t12);
+    			append_dev(section0, div0);
+    			append_dev(section0, t13);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(section0, null);
     			}
 
-    			append_dev(div, t13);
-    			append_dev(div, section1);
+    			append_dev(div1, t14);
+    			append_dev(div1, section1);
     			append_dev(section1, footer);
+    			append_dev(footer, t15);
+    			append_dev(footer, a2);
+    			append_dev(footer, t17);
     		},
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*projects*/ 1) {
@@ -2475,7 +2531,7 @@ var app = (function () {
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(div1);
     			destroy_each(each_blocks, detaching);
     		}
     	};
@@ -2541,12 +2597,114 @@ var app = (function () {
     	}
     }
 
-    /* src/Chananigans.svelte generated by Svelte v3.42.1 */
+    function cubicOut(t) {
+        const f = t - 1.0;
+        return f * f * f + 1.0;
+    }
 
-    const { console: console_1 } = globals;
+    function is_date(obj) {
+        return Object.prototype.toString.call(obj) === '[object Date]';
+    }
+
+    function get_interpolator(a, b) {
+        if (a === b || a !== a)
+            return () => a;
+        const type = typeof a;
+        if (type !== typeof b || Array.isArray(a) !== Array.isArray(b)) {
+            throw new Error('Cannot interpolate values of different type');
+        }
+        if (Array.isArray(a)) {
+            const arr = b.map((bi, i) => {
+                return get_interpolator(a[i], bi);
+            });
+            return t => arr.map(fn => fn(t));
+        }
+        if (type === 'object') {
+            if (!a || !b)
+                throw new Error('Object cannot be null');
+            if (is_date(a) && is_date(b)) {
+                a = a.getTime();
+                b = b.getTime();
+                const delta = b - a;
+                return t => new Date(a + t * delta);
+            }
+            const keys = Object.keys(b);
+            const interpolators = {};
+            keys.forEach(key => {
+                interpolators[key] = get_interpolator(a[key], b[key]);
+            });
+            return t => {
+                const result = {};
+                keys.forEach(key => {
+                    result[key] = interpolators[key](t);
+                });
+                return result;
+            };
+        }
+        if (type === 'number') {
+            const delta = b - a;
+            return t => a + t * delta;
+        }
+        throw new Error(`Cannot interpolate ${type} values`);
+    }
+    function tweened(value, defaults = {}) {
+        const store = writable(value);
+        let task;
+        let target_value = value;
+        function set(new_value, opts) {
+            if (value == null) {
+                store.set(value = new_value);
+                return Promise.resolve();
+            }
+            target_value = new_value;
+            let previous_task = task;
+            let started = false;
+            let { delay = 0, duration = 400, easing = identity, interpolate = get_interpolator } = assign(assign({}, defaults), opts);
+            if (duration === 0) {
+                if (previous_task) {
+                    previous_task.abort();
+                    previous_task = null;
+                }
+                store.set(value = target_value);
+                return Promise.resolve();
+            }
+            const start = now() + delay;
+            let fn;
+            task = loop(now => {
+                if (now < start)
+                    return true;
+                if (!started) {
+                    fn = interpolate(value, new_value);
+                    if (typeof duration === 'function')
+                        duration = duration(value, new_value);
+                    started = true;
+                }
+                if (previous_task) {
+                    previous_task.abort();
+                    previous_task = null;
+                }
+                const elapsed = now - start;
+                if (elapsed > duration) {
+                    store.set(value = new_value);
+                    return false;
+                }
+                // @ts-ignore
+                store.set(value = fn(easing(elapsed / duration)));
+                return true;
+            });
+            return task.promise;
+        }
+        return {
+            set,
+            update: (fn, opts) => set(fn(target_value, value), opts),
+            subscribe: store.subscribe
+        };
+    }
+
+    /* src/Chananigans.svelte generated by Svelte v3.42.1 */
     const file$3 = "src/Chananigans.svelte";
 
-    // (16:0) <Link to="/">
+    // (30:1) <Link to="/">
     function create_default_slot$2(ctx) {
     	let button;
 
@@ -2555,8 +2713,8 @@ var app = (function () {
     			button = element("button");
     			button.textContent = "Back";
     			attr_dev(button, "id", "back-btn");
-    			attr_dev(button, "class", "svelte-1nshsuj");
-    			add_location(button, file$3, 15, 13, 476);
+    			attr_dev(button, "class", "svelte-1er85o2");
+    			add_location(button, file$3, 29, 14, 747);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -2570,7 +2728,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$2.name,
     		type: "slot",
-    		source: "(16:0) <Link to=\\\"/\\\">",
+    		source: "(30:1) <Link to=\\\"/\\\">",
     		ctx
     	});
 
@@ -2578,25 +2736,27 @@ var app = (function () {
     }
 
     function create_fragment$3(ctx) {
-    	let div;
+    	let link0;
     	let t0;
+    	let div;
+    	let t1;
     	let main;
     	let h22;
-    	let t1;
+    	let t2;
     	let h21;
     	let h20;
-    	let t2;
+    	let t3;
     	let span;
-    	let t4;
+    	let t5;
     	let img;
     	let img_src_value;
-    	let t5;
-    	let link;
+    	let t6;
+    	let link1;
     	let current;
     	let mounted;
     	let dispose;
 
-    	link = new Link({
+    	link1 = new Link({
     			props: {
     				to: "/",
     				$$slots: { default: [create_default_slot$2] },
@@ -2607,56 +2767,63 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div = element("div");
+    			link0 = element("link");
     			t0 = space();
+    			div = element("div");
+    			t1 = space();
     			main = element("main");
     			h22 = element("h2");
-    			t1 = text("hey, kid.");
+    			t2 = text("hey, kid.");
     			h21 = element("h2");
     			h20 = element("h2");
-    			t2 = text("You want some ");
+    			t3 = text("You want some ");
     			span = element("span");
     			span.textContent = "memes?";
-    			t4 = space();
-    			img = element("img");
     			t5 = space();
-    			create_component(link.$$.fragment);
+    			img = element("img");
+    			t6 = space();
+    			create_component(link1.$$.fragment);
+    			attr_dev(link0, "href", "https://fonts.googleapis.com/css?family=Barrio");
+    			attr_dev(link0, "rel", "stylesheet");
+    			add_location(link0, file$3, 22, 0, 418);
     			attr_dev(div, "id", "black-cover");
-    			attr_dev(div, "class", "svelte-1nshsuj");
-    			add_location(div, file$3, 10, 0, 228);
+    			attr_dev(div, "class", "svelte-1er85o2");
+    			add_location(div, file$3, 24, 0, 497);
     			attr_dev(span, "id", "meme-btn");
-    			attr_dev(span, "class", "svelte-1nshsuj");
-    			add_location(span, file$3, 13, 18, 301);
-    			attr_dev(h20, "class", "svelte-1nshsuj");
-    			add_location(h20, file$3, 13, 0, 283);
+    			attr_dev(span, "class", "svelte-1er85o2");
+    			add_location(span, file$3, 27, 19, 571);
+    			attr_dev(h20, "class", "svelte-1er85o2");
+    			add_location(h20, file$3, 27, 1, 553);
     			if (!src_url_equal(img.src, img_src_value = "https://nyc3.digitaloceanspaces.com/circlecircle.studio/mtahearts.jpeg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "boobooboo");
-    			attr_dev(img, "class", "svelte-1nshsuj");
-    			add_location(img, file$3, 14, 1, 364);
-    			attr_dev(h21, "class", "svelte-1nshsuj");
-    			add_location(h21, file$3, 12, 14, 278);
-    			attr_dev(h22, "class", "svelte-1nshsuj");
-    			add_location(h22, file$3, 12, 1, 265);
-    			attr_dev(main, "class", "svelte-1nshsuj");
-    			add_location(main, file$3, 11, 0, 257);
+    			attr_dev(img, "class", "svelte-1er85o2");
+    			add_location(img, file$3, 28, 1, 634);
+    			attr_dev(h21, "class", "svelte-1er85o2");
+    			add_location(h21, file$3, 26, 14, 547);
+    			attr_dev(h22, "class", "svelte-1er85o2");
+    			add_location(h22, file$3, 26, 1, 534);
+    			attr_dev(main, "class", "svelte-1er85o2");
+    			add_location(main, file$3, 25, 0, 526);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
+    			insert_dev(target, link0, anchor);
     			insert_dev(target, t0, anchor);
+    			insert_dev(target, div, anchor);
+    			insert_dev(target, t1, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, h22);
-    			append_dev(h22, t1);
+    			append_dev(h22, t2);
     			append_dev(h22, h21);
     			append_dev(h21, h20);
-    			append_dev(h20, t2);
+    			append_dev(h20, t3);
     			append_dev(h20, span);
-    			append_dev(h21, t4);
-    			append_dev(h21, img);
     			append_dev(h21, t5);
-    			mount_component(link, h21, null);
+    			append_dev(h21, img);
+    			append_dev(h21, t6);
+    			mount_component(link1, h21, null);
     			current = true;
 
     			if (!mounted) {
@@ -2665,28 +2832,30 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			const link_changes = {};
+    			const link1_changes = {};
 
-    			if (dirty & /*$$scope*/ 2) {
-    				link_changes.$$scope = { dirty, ctx };
+    			if (dirty & /*$$scope*/ 4) {
+    				link1_changes.$$scope = { dirty, ctx };
     			}
 
-    			link.$set(link_changes);
+    			link1.$set(link1_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(link.$$.fragment, local);
+    			transition_in(link1.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(link.$$.fragment, local);
+    			transition_out(link1.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(link0);
     			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(main);
-    			destroy_component(link);
+    			destroy_component(link1);
     			mounted = false;
     			dispose();
     		}
@@ -2710,17 +2879,30 @@ var app = (function () {
     	const handleClick = e => {
     		e.preventDefault();
     		const img = document.getElementsByTagName('img')[0];
-    		console.log(img.style.opacity);
     		img.style.opacity = 1;
     	};
+
+    	const progress = tweened(0, { duration: 400, easing: cubicOut });
+
+    	onMount(async () => {
+    		
+    	});
 
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1.warn(`<Chananigans> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Chananigans> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ Link, handleClick });
+    	$$self.$capture_state = () => ({
+    		tweened,
+    		cubicOut,
+    		Link,
+    		onMount,
+    		handleClick,
+    		progress
+    	});
+
     	return [handleClick];
     }
 
