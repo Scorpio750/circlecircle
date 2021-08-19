@@ -3,11 +3,12 @@
 	export let name;
 </script>
 
-<link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>
 <Router />
 
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Barrio&family=Baloo+2&display=swap');
 	:global(body) {
 		padding: 0;
+		font-family: 'Baloo 2', sans-serif;
 	}
 </style>
