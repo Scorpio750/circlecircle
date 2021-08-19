@@ -70,13 +70,14 @@
 	}
 
 	.text-tile {
-		background-color: rgba(255, 255, 255, 0.5);
+		background-color: rgba(255, 255, 255, 0.4);
 	}
 
 	#horizontal-spacer {
 		margin: 3rem 0;
-		width: 8rem;
+		width: 10rem;
 		height: 2rem;
 		background-color: black;
+		border-radius: 5px;;
 	}
 </style>

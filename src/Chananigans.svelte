@@ -1,8 +1,8 @@
 <script>
 	import { tweened } from 'svelte/motion';
 	import { cubicOut } from 'svelte/easing';
-	import { Link } from 'svelte-routing';
 	import { onMount } from 'svelte';
+	import BackButton from './BackButton.svelte';
 
 	let wew;
 	let frogeDance;
@@ -88,34 +88,24 @@
 	});
 </script>
 
-<div id="black-cover"></div>
 <main>
 	<h2>hey, kid.<h2>
 	<h2>You want some <span on:click={handleClick} id="meme-btn">memes?</span></h2>
-	<Link to="/"><button id="back-btn">Back</button></Link>
+	<BackButton />
+	<img src="https://nyc3.digitaloceanspaces.com/circlecircle.studio/mtahearts.jpeg" alt="boobooboo">
 </main>
-
-<img src="https://nyc3.digitaloceanspaces.com/circlecircle.studio/mtahearts.jpeg" alt="boobooboo">
 
 <style>
 	h2 {
 		font-family: 'Barrio';
 	}
 
-	#black-cover {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		background-color: black;
-		z-index: -1;
-	}
-
 	main {
+		background-color: black;
+		height: 100vh;
 		display: flex;
 		flex-flow: column nowrap;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: center;
 	}
 
@@ -135,13 +125,5 @@
 		color: fuchsia;
 		font-style: oblique;
 		cursor: pointer;
-	}
-
-	#back-btn {
-		position: absolute;
-		left: 3vh;
-		bottom: 1vh;
-		font-size: 18px;
-		font-family: sans-serif;
 	}
 </style>
