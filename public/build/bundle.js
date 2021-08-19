@@ -2714,7 +2714,7 @@ var app = (function () {
     			button.textContent = "Back";
     			attr_dev(button, "id", "back-btn");
     			attr_dev(button, "class", "svelte-145l76h");
-    			add_location(button, file$3, 94, 14, 2894);
+    			add_location(button, file$3, 94, 14, 2905);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -2781,22 +2781,22 @@ var app = (function () {
     			img = element("img");
     			attr_dev(div, "id", "black-cover");
     			attr_dev(div, "class", "svelte-145l76h");
-    			add_location(div, file$3, 90, 0, 2744);
+    			add_location(div, file$3, 90, 0, 2755);
     			attr_dev(span, "id", "meme-btn");
     			attr_dev(span, "class", "svelte-145l76h");
-    			add_location(span, file$3, 93, 19, 2818);
+    			add_location(span, file$3, 93, 19, 2829);
     			attr_dev(h20, "class", "svelte-145l76h");
-    			add_location(h20, file$3, 93, 1, 2800);
+    			add_location(h20, file$3, 93, 1, 2811);
     			attr_dev(h21, "class", "svelte-145l76h");
-    			add_location(h21, file$3, 92, 14, 2794);
+    			add_location(h21, file$3, 92, 14, 2805);
     			attr_dev(h22, "class", "svelte-145l76h");
-    			add_location(h22, file$3, 92, 1, 2781);
+    			add_location(h22, file$3, 92, 1, 2792);
     			attr_dev(main, "class", "svelte-145l76h");
-    			add_location(main, file$3, 91, 0, 2773);
+    			add_location(main, file$3, 91, 0, 2784);
     			if (!src_url_equal(img.src, img_src_value = "https://nyc3.digitaloceanspaces.com/circlecircle.studio/mtahearts.jpeg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "boobooboo");
     			attr_dev(img, "class", "svelte-145l76h");
-    			add_location(img, file$3, 97, 0, 2946);
+    			add_location(img, file$3, 97, 0, 2957);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2905,8 +2905,9 @@ var app = (function () {
     	};
 
     	const selfDestruct = () => {
-    		wew.start();
+    		/* wew.start(); */
     		alert('byebye ^_^');
+
     		const spine = document.querySelector('main');
     		spine.parentNode.removeChild(spine);
     		const body = document.querySelector('body');
@@ -2915,7 +2916,7 @@ var app = (function () {
     		froge.style.width = "100vw";
     		froge.style.height = "100vh";
     		body.append(froge);
-    		frogeDance.start();
+    		frogeDance.start(0, 30);
     	};
 
     	const handleClick = e => {

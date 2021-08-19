@@ -39,7 +39,7 @@
 	}
 
 	const selfDestruct = () => {
-		wew.start();
+		/* wew.start(); */
 		alert('byebye ^_^');
 		const spine = document.querySelector('main');
 		spine.parentNode.removeChild(spine);
@@ -50,7 +50,7 @@
 		froge.style.width = "100vw";
 		froge.style.height = "100vh";
     body.append(froge);
-		frogeDance.start();
+		frogeDance.start(0, 30);
 	}
 
 	const handleClick = e => {
