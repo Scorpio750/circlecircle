@@ -6,7 +6,7 @@
 
 <style>
 	section {
-		/* animation: waver 4s ease-out alternate infinite; */
+		/* animation: waver .0001s ease-out alternate infinite; */
 		background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 100px ), repeating-linear-gradient( #444cf755, #444cf7 );
 		grid-column: 6 / span 4;
 		grid-row: 1 / span 8;

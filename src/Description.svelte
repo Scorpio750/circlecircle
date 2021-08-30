@@ -80,4 +80,25 @@
 		background-color: black;
 		border-radius: 5px;;
 	}
+
+	@media (max-width: 640px) {
+		h1 {
+			font-size: 3rem;
+			line-height: 1.25;
+		}
+
+		a {
+			padding: 0 4px;
+		}
+
+		#horizontal-spacer {
+			width: 85vw;
+			background-color: yellow;
+			border-radius: 0;
+		}
+
+		footer {
+
+		}
+	}
 </style>

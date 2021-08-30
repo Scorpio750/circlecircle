@@ -13,7 +13,7 @@
 			maxShadowOpacity: 0.5, // Half shadow intensity
 		});
 		pageFlip.loadFromImages([
-			'./assets/Betty/A Cloudy Day By the Sea.jpeg',
+			'./assets/Betty/A Cloudy Day by the Sea.jpeg',
 			'./assets/Betty/Cactus Dance II.jpeg',
 			'./assets/Betty/Cactus Dance.jpeg',
 			'./assets/Betty/Cloud Garden.jpeg',

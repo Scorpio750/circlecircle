@@ -6,8 +6,8 @@
 <main>
 	<Description />
 	<Block />
-	<div class="circle" id="circle1" />
-	<div class="circle" id="circle2" />
+	<!--div class="circle" id="circle1" />
+	<div class="circle" id="circle2" /-->
 </main>
 
 <style>
