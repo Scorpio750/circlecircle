@@ -2263,8 +2263,8 @@ var app = (function () {
     			t = text(t_value);
     			attr_dev(a, "target", "_blank");
     			attr_dev(a, "href", /*project*/ ctx[0].link);
-    			attr_dev(a, "class", "svelte-p2h3qs");
-    			add_location(a, file$6, 30, 4, 975);
+    			attr_dev(a, "class", "svelte-14e325t");
+    			add_location(a, file$6, 30, 4, 974);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -2300,8 +2300,8 @@ var app = (function () {
     			a = element("a");
     			t = text(t_value);
     			attr_dev(a, "href", /*project*/ ctx[0].name.toLowerCase());
-    			attr_dev(a, "class", "svelte-p2h3qs");
-    			add_location(a, file$6, 28, 4, 894);
+    			attr_dev(a, "class", "svelte-14e325t");
+    			add_location(a, file$6, 28, 4, 893);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -2354,8 +2354,8 @@ var app = (function () {
     			t0 = text("\n\t\t\t\t- ");
     			t1 = text(t1_value);
     			t2 = space();
-    			attr_dev(li, "class", "svelte-p2h3qs");
-    			add_location(li, file$6, 26, 3, 816);
+    			attr_dev(li, "class", "svelte-14e325t");
+    			add_location(li, file$6, 26, 3, 815);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -2448,32 +2448,32 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(h1, "class", "svelte-p2h3qs");
+    			attr_dev(h1, "class", "svelte-14e325t");
     			add_location(h1, file$6, 7, 3, 148);
     			add_location(header, file$6, 6, 2, 136);
-    			attr_dev(p0, "class", "svelte-p2h3qs");
+    			attr_dev(p0, "class", "svelte-14e325t");
     			add_location(p0, file$6, 10, 3, 218);
     			attr_dev(a0, "href", "https://www.instagram.com/copy____cat___/");
-    			attr_dev(a0, "class", "svelte-p2h3qs");
+    			attr_dev(a0, "class", "svelte-14e325t");
     			add_location(a0, file$6, 13, 4, 374);
     			attr_dev(a1, "href", "https://www.facebook.com/facebo/");
-    			attr_dev(a1, "class", "svelte-p2h3qs");
+    			attr_dev(a1, "class", "svelte-14e325t");
     			add_location(a1, file$6, 15, 4, 453);
-    			attr_dev(p1, "class", "svelte-p2h3qs");
+    			attr_dev(p1, "class", "svelte-14e325t");
     			add_location(p1, file$6, 12, 3, 322);
     			attr_dev(a2, "href", "https://syncretik.co");
-    			attr_dev(a2, "class", "svelte-p2h3qs");
+    			attr_dev(a2, "class", "svelte-14e325t");
     			add_location(a2, file$6, 19, 3, 604);
-    			attr_dev(p2, "class", "svelte-p2h3qs");
+    			attr_dev(p2, "class", "svelte-14e325t");
     			add_location(p2, file$6, 18, 3, 521);
-    			attr_dev(p3, "class", "svelte-p2h3qs");
+    			attr_dev(p3, "class", "svelte-14e325t");
     			add_location(p3, file$6, 22, 3, 687);
-    			attr_dev(div0, "class", "text-tile svelte-p2h3qs");
+    			attr_dev(div0, "class", "text-tile svelte-14e325t");
     			add_location(div0, file$6, 9, 2, 191);
-    			attr_dev(div1, "class", "text-tile svelte-p2h3qs");
+    			attr_dev(div1, "class", "texttile");
     			add_location(div1, file$6, 24, 2, 758);
     			attr_dev(section, "id", "description-section");
-    			attr_dev(section, "class", "svelte-p2h3qs");
+    			attr_dev(section, "class", "svelte-14e325t");
     			add_location(section, file$6, 5, 0, 99);
     		},
     		l: function claim(nodes) {

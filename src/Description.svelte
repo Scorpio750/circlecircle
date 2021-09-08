@@ -22,7 +22,7 @@
 
 			<p>for now, check out some stuff I did, or tried to do:</p>
 		</div>
-		<div class="text-tile">
+		<div class="texttile">
 			{#each projects as project}
 			<li>
 				{#if project.name === "Betty" || project.name === "chananigans"}
@@ -99,11 +99,19 @@
 		border-radius: 5px;;
 	}
 
+	li:nth-child(2n) {
+		list-style: circle;
+	}
+
+	li:nth-child(2n+1) {
+		list-style: disc;
+	}
+
 	@media screen and (max-width: 640px) {
-		h1 {
-			font-size: 3rem;
-			line-height: 1.25;
-		}
+	h1 {
+	font-size: 3rem;
+				line-height: 1.25;
+			}
 
 		a {
 			padding: 0 4px;
@@ -115,8 +123,5 @@
 			border-radius: 0;
 		}
 
-		footer {
-
-		}
 	}
 </style>
