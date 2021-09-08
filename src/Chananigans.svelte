@@ -92,7 +92,7 @@
 	<h2>hey, kid.<h2>
 	<h2>You want some <span on:click={handleClick} id="meme-btn">memes?</span></h2>
 	<BackButton />
-	<img src="https://nyc3.digitaloceanspaces.com/circlecircle.studio/mtahearts.jpeg" alt="boobooboo">
+	<img src="./assets/awake but at what cost.jpg" alt="boobooboo">
 </main>
 
 <style>
