@@ -8,7 +8,7 @@
 		const book = document.querySelector('#flipbook');
 		const pageFlip = new PageFlip(book, {
 			width: 360,
-			height: 540,
+			height: 340,
 			maxShadowOpacity: 0.5, // Half shadow intensity
 		});
 		pageFlip.loadFromImages([
