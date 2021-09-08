@@ -2,14 +2,14 @@
 	import { Link } from 'svelte-routing';
 </script>
 
-<Link to="/"><button id="back-btn">Back</button></Link>
+<Link to="/"><button id="back-btn">&larr</button></Link>
 
 <style>
 	#back-btn {
 		position: absolute;
-		left: 3vh;
-		top: 1vh;
-		font-size: 18px;
+		left: 0;
+		top: 50vh;
+		font-size: 54px;
 		font-family: sans-serif;
 		cursor: pointer;
 	}

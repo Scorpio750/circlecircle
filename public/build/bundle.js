@@ -2862,9 +2862,9 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			button = element("button");
-    			button.textContent = "Back";
+    			button.textContent = "←";
     			attr_dev(button, "id", "back-btn");
-    			attr_dev(button, "class", "svelte-erjeto");
+    			attr_dev(button, "class", "svelte-hv008n");
     			add_location(button, file$3, 4, 13, 73);
     		},
     		m: function mount(target, anchor) {
