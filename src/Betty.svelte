@@ -9,7 +9,7 @@
 		console.log({ book });
 		const pageFlip = new PageFlip(book, {
 			width: 360,
-			height: 640,
+			height: 340,
 			maxShadowOpacity: 0.5, // Half shadow intensity
 		});
 		pageFlip.loadFromImages([
@@ -57,7 +57,8 @@
 
 <style>
 	#table {
-		height: 100vh;
+		min-height: 100vh;
+		overflow: hidden;
 		width: 100vw;
 		display: flex;
 		justify-content: center;

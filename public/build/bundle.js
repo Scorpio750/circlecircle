@@ -2862,9 +2862,9 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			button = element("button");
-    			button.textContent = "←";
+    			button.textContent = "↩";
     			attr_dev(button, "id", "back-btn");
-    			attr_dev(button, "class", "svelte-hv008n");
+    			attr_dev(button, "class", "svelte-1m4x81n");
     			add_location(button, file$3, 4, 13, 73);
     		},
     		m: function mount(target, anchor) {
@@ -3240,7 +3240,7 @@ var app = (function () {
     			attr_dev(div, "id", "flipbook");
     			add_location(div, file$1, 52, 1, 1760);
     			attr_dev(main, "id", "table");
-    			attr_dev(main, "class", "svelte-39ilby");
+    			attr_dev(main, "class", "svelte-1mhrgak");
     			add_location(main, file$1, 51, 0, 1741);
     		},
     		l: function claim(nodes) {
@@ -3291,7 +3291,7 @@ var app = (function () {
     		const pageFlip = new pageFlip_browser.PageFlip(book,
     		{
     				width: 360,
-    				height: 640,
+    				height: 340,
     				maxShadowOpacity: 0.5, // Half shadow intensity
     				
     			});
