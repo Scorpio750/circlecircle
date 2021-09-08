@@ -22,7 +22,6 @@
 
 			<p>for now, check out some stuff I did, or tried to do:</p>
 		</div>
-		<div id="horizontal-spacer" />
 		<div class="text-tile">
 			{#each projects as project}
 			<li>
