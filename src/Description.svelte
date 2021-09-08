@@ -11,6 +11,8 @@
 			<p>setting up my own website is very time consuming and I'm pretty much exhausted all the time.</p>
 
 			<p>I have better things to do like overshare on
+				<a href="https://www.instagram.com/copy____cat___/">Instagram</a>
+				 and
 				<a href="https://www.facebook.com/facebo/">Facebook</a>
 			</p>
 
@@ -37,14 +39,14 @@
 
 <style>
 	#description-section {
+		overflow: scroll;
 		margin: 0 2rem;
 		grid-column: 1 / span 5;
 		grid-row: 1 / span 8;
 	}
 
 	h1 {
-		color: blue;
-		font-size: 4em;
+		font-size: 3em;
 		font-weight: 100;
 	}
 
@@ -61,7 +63,18 @@
  a {
 		padding:3px 5px;
 		color: white;
-		background-color: deepskyblue;
+		background-color: black;
+		animation: glowy 1s alternate infinite ease-out;
+	}
+
+	@keyframes glowy {
+		from {
+		}
+
+		to {
+			color: yellow;
+			background-color: white;
+		}
 	}
 
 	a:hover {
