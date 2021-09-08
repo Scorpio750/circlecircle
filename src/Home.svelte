@@ -40,11 +40,8 @@
 
 	@media (max-width: 960px) {
 		main {
-			display: inline-block;
-		}
-
-		header {
-			font-size: 10px;
+			display: block;
+			font-size: 0.8rem;
 		}
 
 		#horizontal-spacer {

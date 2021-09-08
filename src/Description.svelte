@@ -44,9 +44,22 @@
 		grid-row: 1 / span 8;
 	}
 
+	@media screen and (max-width: 960px) {
+		#description-section {
+			padding: 1em;
+			margin: 0;
+		}
+	}
+
 	@media screen and (max-width: 640px) {
 		#description-section {
 			background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 100px ), repeating-linear-gradient( yellow, lightyellow );
+			max-width: 100vw;
+		}
+
+		#description-section h1 {
+			font-size: 1.75rem;
+			font-weight: 900;
 		}
 	}
 
@@ -104,14 +117,11 @@
 	}
 
 	li:nth-child(2n+1) {
-		list-style: disc;
+		list-style: circle;
 	}
 
 	@media screen and (max-width: 640px) {
-	h1 {
-	font-size: 3rem;
-				line-height: 1.25;
-			}
+		h1 { font-size: 3rem; line-height: 1.25; }
 
 		a {
 			padding: 0 4px;
