@@ -9,6 +9,6 @@
 	@import url('https://fonts.googleapis.com/css2?family=Barrio&family=Baloo+2&display=swap');
 	:global(body) {
 		padding: 0;
-		font-family: 'Baloo 2', sans-serif;
+		font-family: Verdana, sans-serif;
 	}
 </style>

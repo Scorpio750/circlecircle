@@ -44,6 +44,12 @@
 		grid-row: 1 / span 8;
 	}
 
+	@media screen and (max-width: 640px) {
+		#description-section {
+			background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 100px ), repeating-linear-gradient( yellow, lightyellow );
+		}
+	}
+
 	h1 {
 		font-size: 3em;
 		font-weight: 100;
@@ -93,7 +99,7 @@
 		border-radius: 5px;;
 	}
 
-	@media (max-width: 640px) {
+	@media screen and (max-width: 640px) {
 		h1 {
 			font-size: 3rem;
 			line-height: 1.25;
