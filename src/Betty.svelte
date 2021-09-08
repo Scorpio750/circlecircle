@@ -6,10 +6,9 @@
 
 	onMount(async () => {
 		const book = document.querySelector('#flipbook');
-		console.log({ book });
 		const pageFlip = new PageFlip(book, {
 			width: 360,
-			height: 340,
+			height: 540,
 			maxShadowOpacity: 0.5, // Half shadow intensity
 		});
 		pageFlip.loadFromImages([
@@ -63,6 +62,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-image: url('../assets/table.jpeg');
+		background-color: white;
 	}
 </style>
