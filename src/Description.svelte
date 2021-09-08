@@ -113,7 +113,7 @@
 	}
 
 	li:nth-child(2n) {
-		list-style: circle;
+		list-style: disc;
 	}
 
 	li:nth-child(2n+1) {
