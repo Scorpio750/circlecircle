@@ -5,7 +5,7 @@
 
 <section id="description-section">
 		<header>
-			<h1>deleting the in-between / WHAT ARE YOU DOING HERE</h1>
+			<h1>circlecircle.studio</h1>
 		</header>
 		<div class="text-tile">
 			<p>setting up my own website is very time consuming and I'm pretty much exhausted all the time.</p>

@@ -2264,7 +2264,7 @@ var app = (function () {
     			attr_dev(a, "target", "_blank");
     			attr_dev(a, "href", /*project*/ ctx[0].link);
     			attr_dev(a, "class", "svelte-p2h3qs");
-    			add_location(a, file$6, 30, 4, 1005);
+    			add_location(a, file$6, 30, 4, 975);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -2301,7 +2301,7 @@ var app = (function () {
     			t = text(t_value);
     			attr_dev(a, "href", /*project*/ ctx[0].name.toLowerCase());
     			attr_dev(a, "class", "svelte-p2h3qs");
-    			add_location(a, file$6, 28, 4, 924);
+    			add_location(a, file$6, 28, 4, 894);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -2355,7 +2355,7 @@ var app = (function () {
     			t1 = text(t1_value);
     			t2 = space();
     			attr_dev(li, "class", "svelte-p2h3qs");
-    			add_location(li, file$6, 26, 3, 846);
+    			add_location(li, file$6, 26, 3, 816);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -2419,7 +2419,7 @@ var app = (function () {
     			section = element("section");
     			header = element("header");
     			h1 = element("h1");
-    			h1.textContent = "deleting the in-between / WHAT ARE YOU DOING HERE";
+    			h1.textContent = "circlecircle.studio";
     			t1 = space();
     			div0 = element("div");
     			p0 = element("p");
@@ -2452,26 +2452,26 @@ var app = (function () {
     			add_location(h1, file$6, 7, 3, 148);
     			add_location(header, file$6, 6, 2, 136);
     			attr_dev(p0, "class", "svelte-p2h3qs");
-    			add_location(p0, file$6, 10, 3, 248);
+    			add_location(p0, file$6, 10, 3, 218);
     			attr_dev(a0, "href", "https://www.instagram.com/copy____cat___/");
     			attr_dev(a0, "class", "svelte-p2h3qs");
-    			add_location(a0, file$6, 13, 4, 404);
+    			add_location(a0, file$6, 13, 4, 374);
     			attr_dev(a1, "href", "https://www.facebook.com/facebo/");
     			attr_dev(a1, "class", "svelte-p2h3qs");
-    			add_location(a1, file$6, 15, 4, 483);
+    			add_location(a1, file$6, 15, 4, 453);
     			attr_dev(p1, "class", "svelte-p2h3qs");
-    			add_location(p1, file$6, 12, 3, 352);
+    			add_location(p1, file$6, 12, 3, 322);
     			attr_dev(a2, "href", "https://syncretik.co");
     			attr_dev(a2, "class", "svelte-p2h3qs");
-    			add_location(a2, file$6, 19, 3, 634);
+    			add_location(a2, file$6, 19, 3, 604);
     			attr_dev(p2, "class", "svelte-p2h3qs");
-    			add_location(p2, file$6, 18, 3, 551);
+    			add_location(p2, file$6, 18, 3, 521);
     			attr_dev(p3, "class", "svelte-p2h3qs");
-    			add_location(p3, file$6, 22, 3, 717);
+    			add_location(p3, file$6, 22, 3, 687);
     			attr_dev(div0, "class", "text-tile svelte-p2h3qs");
-    			add_location(div0, file$6, 9, 2, 221);
+    			add_location(div0, file$6, 9, 2, 191);
     			attr_dev(div1, "class", "text-tile svelte-p2h3qs");
-    			add_location(div1, file$6, 24, 2, 788);
+    			add_location(div1, file$6, 24, 2, 758);
     			attr_dev(section, "id", "description-section");
     			attr_dev(section, "class", "svelte-p2h3qs");
     			add_location(section, file$6, 5, 0, 99);
