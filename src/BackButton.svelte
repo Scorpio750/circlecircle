@@ -7,7 +7,7 @@
 <style>
 	#back-btn {
 		position: absolute;
-		right: 0;
+		left: 0;
 		top: 0;
 		font-size: 32px;
 		cursor: pointer;

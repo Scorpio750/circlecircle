@@ -38,9 +38,10 @@
 		grid-template-rows: repeat(8, minmax(10px, 1fr));
 	}
 
-	@media (max-width: 960px) {
+	@media (max-width: 768px) {
 		main {
 			display: block;
+			height: 100vh;
 			font-size: 0.8rem;
 		}
 
