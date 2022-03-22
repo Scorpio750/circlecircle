@@ -4,9 +4,13 @@ const projects = [
 		description: "artwork that calls the Brooklyn Art Library home. my physical sketchbook is currently on tour!",
 		link: "https://www.sketchbookproject.com/library/21991a",
 	},
+	// {
+	// 	name: "chananigans" ,
+	// 	description: "an idea that happened with a friend because NYC transit is oftentimes annoying.",
+	// },
 	{
-		name: "chananigans" ,
-		description: "an idea that happened with a friend because NYC transit is oftentimes annoying.",
+		name: "catdance",
+		description: "hey don't click this",
 	},
 	{
 		name: "starberry",
