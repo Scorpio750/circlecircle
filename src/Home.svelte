@@ -31,11 +31,12 @@
 		left: 20vw;
 	}
 
-	main {
+ main {
 		height: 100vh;
 		display: grid;
 		grid-template-columns: repeat(8, minmax(10px, 1fr));
 		grid-template-rows: repeat(8, minmax(10px, 1fr));
+		background-color: #FFF4BE;
 	}
 
 	@media (max-width: 768px) {

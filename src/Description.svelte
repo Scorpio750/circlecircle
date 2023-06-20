@@ -1,6 +1,8 @@
 <script>
 	import projects from './projects.js';
 	import { link } from 'svelte-routing';
+	import Carousel from 'svelte-carousel';
+	import Image from './components/Image.svelte';
 </script>
 
 <section id="description-section">
@@ -22,7 +24,17 @@
 
 			<p>for now, check out some stuff I did, or tried to do:</p>
 		</div>
-		<div class="texttile">
+		<div class="hero">
+			<Carousel
+				autoplay
+				autoplayDuration={5000}
+			>
+				<Image src="./assets/Betty/A Cloudy Day by the Sea.jpeg" />
+				<Image src="./assets/Betty/Cactus Dance II.jpeg" />
+				<Image src="./assets/Betty/Cactus Dance.jpeg" />
+			</Carousel>
+		</div>
+		<div class="text-tile">
 			{#each projects as project}
 			<li>
 				{#if project.name === "Betty" || project.name === "chananigans"}
@@ -82,7 +94,8 @@
 		padding:3px 5px;
 		color: white;
 		background-color: black;
-		animation: glowy 1s alternate infinite ease-out;
+		border-radius: 9999px;
+		/* animation: glowy 1s alternate infinite ease-out; */
 	}
 
 	@keyframes glowy {
@@ -101,7 +114,7 @@
 	}
 
 	.text-tile {
-		background-color: rgba(255, 255, 255, 0.4);
+		background-color: #FFE568;
 	}
 
 	#horizontal-spacer {
