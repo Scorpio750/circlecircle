@@ -10021,7 +10021,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (28:3) <Carousel     autoplay     autoplayDuration={5000}    >
+    // (29:4) <Carousel      autoplay      autoplayDuration={5000}      arrows={false}      particlesToShow={3}      particlesToScroll={2}     >
     function create_default_slot$2(ctx) {
     	let image0;
     	let t0;
@@ -10092,14 +10092,14 @@ var app = (function () {
     		block,
     		id: create_default_slot$2.name,
     		type: "slot",
-    		source: "(28:3) <Carousel     autoplay     autoplayDuration={5000}    >",
+    		source: "(29:4) <Carousel      autoplay      autoplayDuration={5000}      arrows={false}      particlesToShow={3}      particlesToScroll={2}     >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (42:4) {:else}
+    // (47:4) {:else}
     function create_else_block(ctx) {
     	let a;
     	let t_value = /*project*/ ctx[0].name + "";
@@ -10111,8 +10111,8 @@ var app = (function () {
     			t = text(t_value);
     			attr_dev(a, "target", "_blank");
     			attr_dev(a, "href", /*project*/ ctx[0].link);
-    			attr_dev(a, "class", "svelte-1oy7j31");
-    			add_location(a, file$6, 42, 4, 1341);
+    			attr_dev(a, "class", "svelte-tlc32l");
+    			add_location(a, file$6, 47, 4, 1458);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -10128,14 +10128,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(42:4) {:else}",
+    		source: "(47:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (40:4) {#if project.name === "Betty" || project.name === "chananigans"}
+    // (45:4) {#if project.name === "Betty" || project.name === "chananigans"}
     function create_if_block(ctx) {
     	let a;
     	let t_value = /*project*/ ctx[0].name + "";
@@ -10148,8 +10148,8 @@ var app = (function () {
     			a = element("a");
     			t = text(t_value);
     			attr_dev(a, "href", /*project*/ ctx[0].name.toLowerCase());
-    			attr_dev(a, "class", "svelte-1oy7j31");
-    			add_location(a, file$6, 40, 4, 1260);
+    			attr_dev(a, "class", "svelte-tlc32l");
+    			add_location(a, file$6, 45, 4, 1377);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -10172,14 +10172,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(40:4) {#if project.name === \\\"Betty\\\" || project.name === \\\"chananigans\\\"}",
+    		source: "(45:4) {#if project.name === \\\"Betty\\\" || project.name === \\\"chananigans\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (38:3) {#each projects as project}
+    // (43:3) {#each projects as project}
     function create_each_block$1(ctx) {
     	let li;
     	let t0;
@@ -10202,8 +10202,8 @@ var app = (function () {
     			t0 = text("\n\t\t\t\t- ");
     			t1 = text(t1_value);
     			t2 = space();
-    			attr_dev(li, "class", "svelte-1oy7j31");
-    			add_location(li, file$6, 38, 3, 1182);
+    			attr_dev(li, "class", "svelte-tlc32l");
+    			add_location(li, file$6, 43, 3, 1299);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -10225,7 +10225,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(38:3) {#each projects as project}",
+    		source: "(43:3) {#each projects as project}",
     		ctx
     	});
 
@@ -10233,7 +10233,7 @@ var app = (function () {
     }
 
     function create_fragment$7(ctx) {
-    	let section;
+    	let div3;
     	let header;
     	let h1;
     	let t1;
@@ -10253,6 +10253,7 @@ var app = (function () {
     	let t12;
     	let p3;
     	let t14;
+    	let section;
     	let div1;
     	let carousel;
     	let t15;
@@ -10263,6 +10264,9 @@ var app = (function () {
     			props: {
     				autoplay: true,
     				autoplayDuration: 5000,
+    				arrows: false,
+    				particlesToShow: 3,
+    				particlesToScroll: 2,
     				$$slots: { default: [create_default_slot$2] },
     				$$scope: { ctx }
     			},
@@ -10279,7 +10283,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			section = element("section");
+    			div3 = element("div");
     			header = element("header");
     			h1 = element("h1");
     			h1.textContent = "circlecircle.studio";
@@ -10305,6 +10309,7 @@ var app = (function () {
     			p3 = element("p");
     			p3.textContent = "for now, check out some stuff I did, or tried to do:";
     			t14 = space();
+    			section = element("section");
     			div1 = element("div");
     			create_component(carousel.$$.fragment);
     			t15 = space();
@@ -10314,45 +10319,49 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(h1, "class", "svelte-1oy7j31");
-    			add_location(h1, file$6, 9, 3, 237);
-    			add_location(header, file$6, 8, 2, 225);
-    			attr_dev(p0, "class", "svelte-1oy7j31");
-    			add_location(p0, file$6, 12, 3, 307);
+    			attr_dev(h1, "class", "svelte-tlc32l");
+    			add_location(h1, file$6, 9, 3, 233);
+    			attr_dev(header, "class", "svelte-tlc32l");
+    			add_location(header, file$6, 8, 2, 221);
+    			attr_dev(p0, "class", "svelte-tlc32l");
+    			add_location(p0, file$6, 12, 3, 303);
     			attr_dev(a0, "href", "https://www.instagram.com/copy____cat___/");
-    			attr_dev(a0, "class", "svelte-1oy7j31");
-    			add_location(a0, file$6, 15, 4, 463);
+    			attr_dev(a0, "class", "svelte-tlc32l");
+    			add_location(a0, file$6, 15, 4, 459);
     			attr_dev(a1, "href", "https://www.facebook.com/facebo/");
-    			attr_dev(a1, "class", "svelte-1oy7j31");
-    			add_location(a1, file$6, 17, 4, 542);
-    			attr_dev(p1, "class", "svelte-1oy7j31");
-    			add_location(p1, file$6, 14, 3, 411);
+    			attr_dev(a1, "class", "svelte-tlc32l");
+    			add_location(a1, file$6, 17, 4, 538);
+    			attr_dev(p1, "class", "svelte-tlc32l");
+    			add_location(p1, file$6, 14, 3, 407);
     			attr_dev(a2, "href", "https://syncretik.co");
-    			attr_dev(a2, "class", "svelte-1oy7j31");
-    			add_location(a2, file$6, 21, 3, 693);
-    			attr_dev(p2, "class", "svelte-1oy7j31");
-    			add_location(p2, file$6, 20, 3, 610);
-    			attr_dev(p3, "class", "svelte-1oy7j31");
-    			add_location(p3, file$6, 24, 3, 776);
-    			attr_dev(div0, "class", "text-tile svelte-1oy7j31");
-    			add_location(div0, file$6, 11, 2, 280);
-    			attr_dev(div1, "class", "hero");
-    			add_location(div1, file$6, 26, 2, 847);
-    			attr_dev(div2, "class", "text-tile svelte-1oy7j31");
-    			add_location(div2, file$6, 36, 2, 1124);
-    			attr_dev(section, "id", "description-section");
-    			attr_dev(section, "class", "svelte-1oy7j31");
-    			add_location(section, file$6, 7, 0, 188);
+    			attr_dev(a2, "class", "svelte-tlc32l");
+    			add_location(a2, file$6, 21, 3, 689);
+    			attr_dev(p2, "class", "svelte-tlc32l");
+    			add_location(p2, file$6, 20, 3, 606);
+    			attr_dev(p3, "class", "svelte-tlc32l");
+    			add_location(p3, file$6, 24, 3, 772);
+    			attr_dev(div0, "class", "text-tile svelte-tlc32l");
+    			add_location(div0, file$6, 11, 2, 276);
+    			attr_dev(div1, "id", "carousel");
+    			attr_dev(div1, "class", "svelte-tlc32l");
+    			add_location(div1, file$6, 27, 3, 869);
+    			attr_dev(section, "class", "hero svelte-tlc32l");
+    			add_location(section, file$6, 26, 2, 843);
+    			attr_dev(div2, "class", "text-tile svelte-tlc32l");
+    			add_location(div2, file$6, 41, 2, 1241);
+    			attr_dev(div3, "id", "description-section");
+    			attr_dev(div3, "class", "svelte-tlc32l");
+    			add_location(div3, file$6, 7, 0, 188);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, section, anchor);
-    			append_dev(section, header);
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, header);
     			append_dev(header, h1);
-    			append_dev(section, t1);
-    			append_dev(section, div0);
+    			append_dev(div3, t1);
+    			append_dev(div3, div0);
     			append_dev(div0, p0);
     			append_dev(div0, t3);
     			append_dev(div0, p1);
@@ -10367,11 +10376,12 @@ var app = (function () {
     			append_dev(p2, t11);
     			append_dev(div0, t12);
     			append_dev(div0, p3);
-    			append_dev(section, t14);
+    			append_dev(div3, t14);
+    			append_dev(div3, section);
     			append_dev(section, div1);
     			mount_component(carousel, div1, null);
-    			append_dev(section, t15);
-    			append_dev(section, div2);
+    			append_dev(div3, t15);
+    			append_dev(div3, div2);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(div2, null);
@@ -10422,7 +10432,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(section);
+    			if (detaching) detach_dev(div3);
     			destroy_component(carousel);
     			destroy_each(each_blocks, detaching);
     		}
@@ -10567,7 +10577,7 @@ var app = (function () {
     			create_component(description.$$.fragment);
     			t = space();
     			create_component(block.$$.fragment);
-    			attr_dev(main, "class", "svelte-dmp8oc");
+    			attr_dev(main, "class", "svelte-1n1fqgm");
     			add_location(main, file$4, 5, 0, 106);
     		},
     		l: function claim(nodes) {

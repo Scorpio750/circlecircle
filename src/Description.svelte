@@ -5,7 +5,7 @@
 	import Image from './components/Image.svelte';
 </script>
 
-<section id="description-section">
+<div id="description-section">
 		<header>
 			<h1>circlecircle.studio</h1>
 		</header>
@@ -24,16 +24,21 @@
 
 			<p>for now, check out some stuff I did, or tried to do:</p>
 		</div>
-		<div class="hero">
-			<Carousel
-				autoplay
-				autoplayDuration={5000}
-			>
-				<Image src="./assets/Betty/A Cloudy Day by the Sea.jpeg" />
-				<Image src="./assets/Betty/Cactus Dance II.jpeg" />
-				<Image src="./assets/Betty/Cactus Dance.jpeg" />
-			</Carousel>
-		</div>
+		<section class="hero">
+			<div id="carousel">
+				<Carousel
+					autoplay
+					autoplayDuration={5000}
+					arrows={false}
+					particlesToShow={3}
+					particlesToScroll={2}
+				>
+					<Image src="./assets/Betty/A Cloudy Day by the Sea.jpeg" />
+					<Image src="./assets/Betty/Cactus Dance II.jpeg" />
+					<Image src="./assets/Betty/Cactus Dance.jpeg" />
+				</Carousel>
+			</div>
+		</section>
 		<div class="text-tile">
 			{#each projects as project}
 			<li>
@@ -46,14 +51,28 @@
 			</li>
 			{/each}
 	</div>
-</section>
+</div>
 
 <style>
+	header {
+		margin: 1rem 0;
+	}
+
 	#description-section {
-		overflow: scroll;
 		margin: 0 2rem;
-		grid-column: 1 / span 5;
-		grid-row: 1 / span 8;
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 100px ), repeating-linear-gradient( yellow, lightyellow );
+	}
+
+	.hero {
+		display: flex;
+		justify-content: center;
+	}
+
+	#carousel {
+		width: 50vw;
 	}
 
 	@media screen and (max-width: 960px) {
@@ -64,14 +83,13 @@
 	}
 
 	@media screen and (max-width: 640px) {
-		#description-section {
-			background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 100px ), repeating-linear-gradient( yellow, lightyellow );
-			max-width: 100vw;
-		}
-
 		#description-section h1 {
 			font-size: 1.75rem;
 			font-weight: 900;
+		}
+
+		.tile-text {
+			width: 80vw;
 		}
 	}
 
@@ -115,6 +133,7 @@
 
 	.text-tile {
 		background-color: #FFE568;
+		width: 50vw;
 	}
 
 	#horizontal-spacer {
