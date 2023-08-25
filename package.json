@@ -5,11 +5,17 @@
   "scripts": {
     "build": "rollup -c && cp -r ./public/* ./docs/",
     "dev": "rollup -c -w",
-    "start": "sirv public --no-clear -s"
+    "start": "sirv public --no-clear -s",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
+    "eslint": "^8.48.0",
+    "eslint-plugin-svelte": "^2.33.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "prettier": "^3.0.2",
     "rollup": "^2.3.4",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-livereload": "^2.0.0",
@@ -22,5 +28,8 @@
     "sirv-cli": "^1.0.0",
     "svelte-carousel": "^1.0.25",
     "svelte-routing": "^1.6.0"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
   }
 }
