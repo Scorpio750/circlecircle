@@ -1,17 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Barrio&family=Baloo+2&display=swap");
+@font-face {
+  font-family: "Domaine Display";
+  src: local("./fonts/Test Domaine Display/test-domaine-display.woff2")
+    format("woff2");
+}
 body {
   padding: 0;
-  font-family: Verdana, sans-serif;
-}
-main.svelte-1n1fqgm {
-  background-color: #fff4be;
-}
-@media (max-width: 768px) {
-  main.svelte-1n1fqgm {
-    display: block;
-    height: 100vh;
-    font-size: 0.8rem;
-  }
+  font-family: "Domaine Display", Georgia;
 }
 main.svelte-bn16j1 {
   background-color: black;
@@ -27,6 +21,45 @@ video.svelte-bn16j1 {
   justify-content: center;
   align-items: center;
   background-color: white;
+}
+main.svelte-13g8epk.svelte-13g8epk {
+  display: flex;
+  flex-flow: column;
+  align-items: space-between;
+  background-color: #fff4be;
+}
+footer.svelte-13g8epk.svelte-13g8epk {
+  flex: 1 0 10%;
+  opacity: 1;
+  background-color: black;
+  padding: 1rem;
+  font-weight: 900;
+  display: flex;
+  justify-content: flex-end;
+  font-family: Verdana;
+}
+footer.svelte-13g8epk a.svelte-13g8epk {
+  padding: 0 5px;
+  text-decoration: none;
+  background-color: inherit;
+  color: dimgrey;
+}
+footer.svelte-13g8epk a.svelte-13g8epk:hover {
+  color: grey;
+}
+@media (max-width: 768px) {
+  main.svelte-13g8epk.svelte-13g8epk {
+    display: block;
+    height: 100vh;
+    font-size: 0.8rem;
+  }
+}
+#back-btn.svelte-tod0k2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 32px;
+  cursor: pointer;
 }
 header.svelte-tlc32l.svelte-tlc32l {
   margin: 1rem 0;
@@ -66,20 +99,6 @@ h1.svelte-tlc32l.svelte-tlc32l {
   font-size: 3em;
   font-weight: 100;
 }
-p.svelte-tlc32l.svelte-tlc32l {
-  font-size: 20px;
-}
-li.svelte-tlc32l.svelte-tlc32l {
-  font-size: 18px;
-  margin: 10px;
-  list-style-type: armenian;
-}
-a.svelte-tlc32l.svelte-tlc32l {
-  padding: 3px 5px;
-  color: white;
-  background-color: black;
-  border-radius: 9999px;
-}
 @keyframes svelte-tlc32l-glowy {
   from {
   }
@@ -88,27 +107,14 @@ a.svelte-tlc32l.svelte-tlc32l {
     background-color: white;
   }
 }
-a.svelte-tlc32l.svelte-tlc32l:hover {
-  color: black;
-  background-color: white;
-}
 .text-tile.svelte-tlc32l.svelte-tlc32l {
   background-color: #ffe568;
   width: 50vw;
-}
-li.svelte-tlc32l.svelte-tlc32l:nth-child(2n) {
-  list-style: disc;
-}
-li.svelte-tlc32l.svelte-tlc32l:nth-child(2n + 1) {
-  list-style: circle;
 }
 @media screen and (max-width: 640px) {
   h1.svelte-tlc32l.svelte-tlc32l {
     font-size: 3rem;
     line-height: 1.25;
-  }
-  a.svelte-tlc32l.svelte-tlc32l {
-    padding: 0 4px;
   }
 }
 section.svelte-1kw3red.svelte-1kw3red {
@@ -143,13 +149,6 @@ footer.svelte-1kw3red.svelte-1kw3red {
   font-weight: 900;
   display: flex;
   justify-content: flex-end;
-}
-#back-btn.svelte-tod0k2 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 32px;
-  cursor: pointer;
 }
 :root {
   --sc-color-rgb-light-50p: rgba(93, 93, 93, 0.5);
@@ -201,6 +200,20 @@ footer.svelte-1kw3red.svelte-1kw3red {
 .sc-carousel-button:focus {
   outline: 5px auto;
 }
+.sc-carousel-dots__container.svelte-1oj5bge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 30px;
+}
+.sc-carousel-dots__dot-container.svelte-1oj5bge {
+  height: calc(var(--sc-dot-size) + 14px);
+  width: calc(var(--sc-dot-size) + 10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 :root {
   --sc-arrow-size: 2px;
 }
@@ -237,20 +250,6 @@ footer.svelte-1kw3red.svelte-1kw3red {
 .sc-carousel-arrow__circle_disabled.svelte-9ztt4p:hover {
   opacity: 0.5;
 }
-.sc-carousel-dots__container.svelte-1oj5bge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 0 30px;
-}
-.sc-carousel-dots__dot-container.svelte-1oj5bge {
-  height: calc(var(--sc-dot-size) + 14px);
-  width: calc(var(--sc-dot-size) + 10px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .sc-carousel-progress__indicator.svelte-nuyenl {
   height: 100%;
   background-color: var(--sc-color-hex-dark-50p);
@@ -281,4 +280,23 @@ footer.svelte-1kw3red.svelte-1kw3red {
   opacity: 0.7;
   height: var(--sc-active-dot-size);
   width: var(--sc-active-dot-size);
+}
+footer.svelte-t60opk.svelte-t60opk {
+  flex: 1 0 10%;
+  opacity: 1;
+  background-color: black;
+  padding: 1rem;
+  font-weight: 900;
+  display: flex;
+  justify-content: flex-end;
+  font-family: Verdana;
+}
+footer.svelte-t60opk a.svelte-t60opk {
+  padding: 0 5px;
+  text-decoration: none;
+  background-color: inherit;
+  color: dimgrey;
+}
+footer.svelte-t60opk a.svelte-t60opk:hover {
+  color: grey;
 }

@@ -1,14 +1,16 @@
 <script>
 	import Router from './routes/index.svelte';
-	export let name;
 </script>
 
 <Router />
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Barrio&family=Baloo+2&display=swap');
+	@font-face {
+		font-family: "Domaine Display";
+		src: local("./fonts/Test Domaine Display/test-domaine-display.woff2") format("woff2");
+	}
 	:global(body) {
 		padding: 0;
-		font-family: Verdana, sans-serif;
+		font-family: "Domaine Display", Georgia;
 	}
 </style>

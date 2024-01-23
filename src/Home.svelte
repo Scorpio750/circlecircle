@@ -1,14 +1,20 @@
 <script>
+	import Navbar from './Navbar.svelte';
+	import Portfolio from './Portfolio.svelte';
 	import Description from './Description.svelte';
-	import Block from './Block.svelte';
 </script>
 
+<header>
+	<h1>circlecircle.studio</h1>
+</header>
 <main>
+	<Navbar />
+	<Portfolio />
 	<Description />
-	<Block />
-	<!--div class="circle" id="circle1" />
-	<div class="circle" id="circle2" /-->
 </main>
+<footer>
+	Built by <a href="https://syncretik.co">[Syncretik]</a> 2024, All Rights Reserved.
+</footer>
 
 <style>
 	.circle {
@@ -21,20 +27,34 @@
 		animation: bo 2s infinite linear alternate;
 	}
 
-	#circle1 {
-		top: 5vh;
-		left: 5vw;
-	}
-
-	#circle2 {
-		top: 20vh;
-		left: 20vw;
-	}
-
  main {
-		background-color: #FFF4BE;
+	 display: flex;
+	 flex-flow: column;
+	 align-items: space-between;
+	 background-color: #FFF4BE;
 	}
 
+  footer {
+		flex: 1 0 10%;
+		opacity: 1;
+		background-color: black;
+		padding: 1rem;
+		font-weight: 900;
+		display: flex;
+		justify-content: flex-end;
+		font-family: Verdana;
+	}
+
+	footer a {
+		padding: 0 5px;
+		text-decoration: none;
+		background-color: inherit;
+		color: dimgrey;
+	}
+
+	footer a:hover {
+		color: grey;
+	}
 	@media (max-width: 768px) {
 		main {
 			display: block;
@@ -46,9 +66,6 @@
 			width: 40vw;
 			background-color: yellow;
 		}
-
-		#Block {
-			display: none !important;
-		}
 	}
+
 </style>
