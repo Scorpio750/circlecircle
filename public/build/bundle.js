@@ -135,9 +135,6 @@ var app = (function () {
   function element(name) {
     return document.createElement(name);
   }
-  function svg_element(name) {
-    return document.createElementNS("http://www.w3.org/2000/svg", name);
-  }
   function text(data) {
     return document.createTextNode(data);
   }
@@ -9772,7 +9769,7 @@ var app = (function () {
         div = element("div");
         create_component(carousel.$$.fragment);
         attr_dev(div, "id", "carousel");
-        attr_dev(div, "class", "svelte-1cdt86t");
+        attr_dev(div, "class", "svelte-b7mqc2");
         add_location(div, file$2, 6, 1, 133);
         attr_dev(section, "class", "hero");
         add_location(section, file$2, 5, 0, 109);
@@ -10448,20 +10445,11 @@ var app = (function () {
     let section1;
     let description;
     let t3;
-    let div;
-    let a0;
-    let svg0;
-    let path0;
-    let t4;
-    let a1;
-    let svg1;
-    let path1;
-    let t5;
     let footer;
     let span;
+    let t4;
+    let a;
     let t6;
-    let a2;
-    let t8;
     let current;
     portfolio = new Portfolio({ $$inline: true });
     description = new Description({ $$inline: true });
@@ -10479,67 +10467,26 @@ var app = (function () {
         section1 = element("section");
         create_component(description.$$.fragment);
         t3 = space();
-        div = element("div");
-        a0 = element("a");
-        svg0 = svg_element("svg");
-        path0 = svg_element("path");
-        t4 = space();
-        a1 = element("a");
-        svg1 = svg_element("svg");
-        path1 = svg_element("path");
-        t5 = space();
         footer = element("footer");
         span = element("span");
-        t6 = text("Built by ");
-        a2 = element("a");
-        a2.textContent = "[Syncretik]";
-        t8 = text(" 2024, All Rights Reserved.");
+        t4 = text("Built by ");
+        a = element("a");
+        a.textContent = "[Syncretik]";
+        t6 = text(" 2024, All Rights Reserved.");
         add_location(h1, file, 6, 1, 124);
         add_location(header, file, 5, 0, 114);
         attr_dev(section0, "id", "left-half");
         add_location(section0, file, 9, 1, 171);
-        attr_dev(
-          path0,
-          "d",
-          "M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334",
-        );
-        add_location(path0, file, 17, 4, 488);
-        attr_dev(svg0, "xmlns", "http://www.w3.org/2000/svg");
-        attr_dev(svg0, "width", "32");
-        attr_dev(svg0, "height", "32");
-        attr_dev(svg0, "fill", "currentColor");
-        attr_dev(svg0, "class", "bi bi-instagram");
-        attr_dev(svg0, "viewBox", "0 0 16 16");
-        add_location(svg0, file, 16, 5, 356);
-        attr_dev(a0, "href", "https://www.instagram.com/copy____cat___/");
-        add_location(a0, file, 15, 3, 298);
-        attr_dev(
-          path1,
-          "d",
-          "M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951",
-        );
-        add_location(path1, file, 22, 4, 2149);
-        attr_dev(svg1, "xmlns", "http://www.w3.org/2000/svg");
-        attr_dev(svg1, "width", "32");
-        attr_dev(svg1, "height", "32");
-        attr_dev(svg1, "fill", "currentColor");
-        attr_dev(svg1, "class", "bi bi-facebook");
-        attr_dev(svg1, "viewBox", "0 0 16 16");
-        add_location(svg1, file, 21, 4, 2018);
-        attr_dev(a1, "href", "https://www.facebook.com/facebo/");
-        add_location(a1, file, 20, 3, 1970);
-        attr_dev(div, "id", "social-links");
-        add_location(div, file, 14, 2, 271);
         attr_dev(section1, "id", "right-half");
         add_location(section1, file, 12, 1, 225);
         attr_dev(main, "class", "svelte-s27rxp");
         add_location(main, file, 8, 0, 163);
-        attr_dev(a2, "href", "https://syncretik.co");
-        attr_dev(a2, "class", "svelte-s27rxp");
-        add_location(a2, file, 29, 16, 2522);
-        add_location(span, file, 29, 1, 2507);
+        attr_dev(a, "href", "https://syncretik.co");
+        attr_dev(a, "class", "svelte-s27rxp");
+        add_location(a, file, 17, 16, 314);
+        add_location(span, file, 17, 1, 299);
         attr_dev(footer, "class", "svelte-s27rxp");
-        add_location(footer, file, 28, 0, 2497);
+        add_location(footer, file, 16, 0, 289);
       },
       l: function claim(nodes) {
         throw new Error(
@@ -10556,21 +10503,12 @@ var app = (function () {
         append_dev(main, t2);
         append_dev(main, section1);
         mount_component(description, section1, null);
-        append_dev(section1, t3);
-        append_dev(section1, div);
-        append_dev(div, a0);
-        append_dev(a0, svg0);
-        append_dev(svg0, path0);
-        append_dev(div, t4);
-        append_dev(div, a1);
-        append_dev(a1, svg1);
-        append_dev(svg1, path1);
-        insert_dev(target, t5, anchor);
+        insert_dev(target, t3, anchor);
         insert_dev(target, footer, anchor);
         append_dev(footer, span);
+        append_dev(span, t4);
+        append_dev(span, a);
         append_dev(span, t6);
-        append_dev(span, a2);
-        append_dev(span, t8);
         current = true;
       },
       p: noop,
@@ -10591,7 +10529,7 @@ var app = (function () {
         if (detaching) detach_dev(main);
         destroy_component(portfolio);
         destroy_component(description);
-        if (detaching) detach_dev(t5);
+        if (detaching) detach_dev(t3);
         if (detaching) detach_dev(footer);
       },
     };

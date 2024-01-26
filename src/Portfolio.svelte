@@ -52,4 +52,9 @@
 	#carousel {
 		max-width: 33vw;
 	}
+	@media (max-width: 768px) {
+		#carousel {
+			max-width: 100vw;
+		}
+	}
 </style>
