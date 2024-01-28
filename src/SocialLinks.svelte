@@ -20,11 +20,15 @@
 </section>
 
 <style>
-	section {
+	section {}
+
+	h1 {
+		font-size: 1.7em;
 	}
 
 	#social-links {
 		display: flex;
 		justify-content: space-around;
+		margin: 1em;
 	}
 </style>

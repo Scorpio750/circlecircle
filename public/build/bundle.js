@@ -9772,7 +9772,7 @@ var app = (function () {
         div = element("div");
         create_component(carousel.$$.fragment);
         attr_dev(div, "id", "carousel");
-        attr_dev(div, "class", "svelte-b7mqc2");
+        attr_dev(div, "class", "svelte-1czv9ff");
         add_location(div, file$6, 6, 1, 133);
         attr_dev(section, "class", "hero");
         add_location(section, file$6, 5, 0, 109);
@@ -10187,6 +10187,7 @@ var app = (function () {
         t3 = space();
         a2 = element("a");
         create_component(soundcloudsvg.$$.fragment);
+        attr_dev(h1, "class", "svelte-17740xl");
         add_location(h1, file$2, 7, 1, 184);
         attr_dev(a0, "class", "social-link");
         attr_dev(a0, "href", "https://www.instagram.com/copy____cat___/");
@@ -10198,9 +10199,9 @@ var app = (function () {
         attr_dev(a2, "href", "https://soundcloud.com/capybo");
         add_location(a2, file$2, 15, 2, 428);
         attr_dev(div, "id", "social-links");
-        attr_dev(div, "class", "svelte-1qixefl");
+        attr_dev(div, "class", "svelte-17740xl");
         add_location(div, file$2, 8, 1, 207);
-        attr_dev(section, "class", "svelte-1qixefl");
+        attr_dev(section, "class", "svelte-17740xl");
         add_location(section, file$2, 6, 0, 173);
       },
       l: function claim(nodes) {

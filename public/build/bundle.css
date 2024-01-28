@@ -35,19 +35,24 @@ footer.svelte-s27rxp a.svelte-s27rxp:hover {
     font-size: 0.8rem;
   }
 }
-section.svelte-1qixefl {
+section.svelte-17740xl {
 }
-#social-links.svelte-1qixefl {
+h1.svelte-17740xl {
+  font-size: 1.7em;
+}
+#social-links.svelte-17740xl {
   display: flex;
   justify-content: space-around;
+  margin: 1em;
 }
 #description-section.svelte-g1vdq4 {
 }
-#carousel.svelte-b7mqc2 {
+#carousel.svelte-1czv9ff {
   max-width: 33vw;
+  box-shadow: -16px 10px 4px goldenrod;
 }
 @media (max-width: 768px) {
-  #carousel.svelte-b7mqc2 {
+  #carousel.svelte-1czv9ff {
     max-width: 100vw;
   }
 }
