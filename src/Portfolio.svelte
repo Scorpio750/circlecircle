@@ -51,7 +51,7 @@
 <style>
 	#carousel {
 		max-width: 33vw;
-		box-shadow: -16px 10px 4px goldenrod;;
+		box-shadow: -16px 10px 10px goldenrod;;
 	}
 	@media (max-width: 768px) {
 		#carousel {

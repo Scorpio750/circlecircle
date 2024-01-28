@@ -9772,7 +9772,7 @@ var app = (function () {
         div = element("div");
         create_component(carousel.$$.fragment);
         attr_dev(div, "id", "carousel");
-        attr_dev(div, "class", "svelte-1czv9ff");
+        attr_dev(div, "class", "svelte-19soslq");
         add_location(div, file$6, 6, 1, 133);
         attr_dev(section, "class", "hero");
         add_location(section, file$6, 5, 0, 109);
@@ -10917,13 +10917,13 @@ var app = (function () {
         add_location(section0, file, 10, 1, 220);
         attr_dev(section1, "id", "right-half");
         add_location(section1, file, 14, 1, 292);
-        attr_dev(main, "class", "svelte-s27rxp");
+        attr_dev(main, "class", "svelte-1bty2u4");
         add_location(main, file, 9, 0, 212);
         attr_dev(a, "href", "https://syncretik.co");
-        attr_dev(a, "class", "svelte-s27rxp");
+        attr_dev(a, "class", "svelte-1bty2u4");
         add_location(a, file, 19, 16, 381);
         add_location(span, file, 19, 1, 366);
-        attr_dev(footer, "class", "svelte-s27rxp");
+        attr_dev(footer, "class", "svelte-1bty2u4");
         add_location(footer, file, 18, 0, 356);
       },
       l: function claim(nodes) {

@@ -39,6 +39,7 @@
 	 display: flex;
 	 flex-flow: row;
 	 align-items: space-between;
+	 background-image: repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 100px ), repeating-linear-gradient( yellow, lightyellow )
 	}
 
 	#right-Half {

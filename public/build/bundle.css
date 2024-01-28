@@ -2,12 +2,18 @@ body {
   padding: 0 20vw;
   background-color: #fff4be;
 }
-main.svelte-s27rxp.svelte-s27rxp {
+main.svelte-1bty2u4.svelte-1bty2u4 {
   display: flex;
   flex-flow: row;
   align-items: space-between;
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #e5e5f7 100px
+    ),
+    repeating-linear-gradient(yellow, lightyellow);
 }
-footer.svelte-s27rxp.svelte-s27rxp {
+footer.svelte-1bty2u4.svelte-1bty2u4 {
   flex: 1 0 10%;
   opacity: 1;
   background-color: black;
@@ -16,20 +22,20 @@ footer.svelte-s27rxp.svelte-s27rxp {
   display: flex;
   justify-content: space-between;
 }
-footer.svelte-s27rxp a.svelte-s27rxp {
+footer.svelte-1bty2u4 a.svelte-1bty2u4 {
   padding: 0 5px;
   text-decoration: none;
   background-color: inherit;
   color: dimgrey;
 }
-footer.svelte-s27rxp a.svelte-s27rxp:hover {
+footer.svelte-1bty2u4 a.svelte-1bty2u4:hover {
   color: grey;
 }
 @media (max-width: 768px) {
   body {
     padding: 0 10vw;
   }
-  main.svelte-s27rxp.svelte-s27rxp {
+  main.svelte-1bty2u4.svelte-1bty2u4 {
     display: block;
     height: 100vh;
     font-size: 0.8rem;
@@ -47,12 +53,12 @@ h1.svelte-17740xl {
 }
 #description-section.svelte-g1vdq4 {
 }
-#carousel.svelte-1czv9ff {
+#carousel.svelte-19soslq {
   max-width: 33vw;
-  box-shadow: -16px 10px 4px goldenrod;
+  box-shadow: -16px 10px 10px goldenrod;
 }
 @media (max-width: 768px) {
-  #carousel.svelte-1czv9ff {
+  #carousel.svelte-19soslq {
     max-width: 100vw;
   }
 }
