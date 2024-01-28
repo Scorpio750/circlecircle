@@ -1,5 +1,6 @@
 <script>
 	import Portfolio from './Portfolio.svelte';
+	import SocialLinks from './SocialLinks.svelte';
 	import Description from './Description.svelte';
 </script>
 
@@ -9,6 +10,7 @@
 <main>
 	<section id="left-half">
 		<Portfolio />
+		<SocialLinks />
 	</section>
 	<section id="right-half">
 		<Description />
