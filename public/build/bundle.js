@@ -9885,6 +9885,7 @@ var app = (function () {
         attr_dev(svg, "xmlns:xlink", "http://www.w3.org/1999/xlink");
         attr_dev(svg, "viewBox", "0 0 291.319 291.319");
         attr_dev(svg, "xml:space", "preserve");
+        attr_dev(svg, "class", "svelte-68ut4j");
         add_location(svg, file$5, 0, 0, 0);
       },
       l: function claim(nodes) {
@@ -9986,6 +9987,7 @@ var app = (function () {
         attr_dev(svg, "xmlns:xlink", "http://www.w3.org/1999/xlink");
         attr_dev(svg, "viewBox", "0 0 291.319 291.319");
         attr_dev(svg, "xml:space", "preserve");
+        attr_dev(svg, "class", "svelte-68ut4j");
         add_location(svg, file$4, 0, 0, 0);
       },
       l: function claim(nodes) {
@@ -10088,6 +10090,7 @@ var app = (function () {
         attr_dev(svg, "xmlns:xlink", "http://www.w3.org/1999/xlink");
         attr_dev(svg, "viewBox", "0 0 291.319 291.319");
         attr_dev(svg, "xml:space", "preserve");
+        attr_dev(svg, "class", "svelte-68ut4j");
         add_location(svg, file$3, 0, 0, 0);
       },
       l: function claim(nodes) {
@@ -10608,18 +10611,18 @@ var app = (function () {
         t25 = space();
         div1 = element("div");
         div0 = element("div");
-        add_location(b0, file$1, 8, 29, 397);
-        add_location(big0, file$1, 8, 24, 392);
-        add_location(big1, file$1, 8, 19, 387);
-        add_location(br, file$1, 8, 60, 428);
-        add_location(b1, file$1, 8, 80, 448);
+        add_location(b0, file$1, 8, 29, 223);
+        add_location(big0, file$1, 8, 24, 218);
+        add_location(big1, file$1, 8, 19, 213);
+        add_location(br, file$1, 8, 60, 254);
+        add_location(b1, file$1, 8, 80, 274);
         attr_dev(span0, "lang", "ja");
-        add_location(span0, file$1, 8, 64, 432);
-        add_location(i, file$1, 8, 102, 470);
+        add_location(span0, file$1, 8, 64, 258);
+        add_location(i, file$1, 8, 102, 296);
         attr_dev(td0, "colspan", "2");
-        add_location(td0, file$1, 8, 3, 371);
+        add_location(td0, file$1, 8, 3, 197);
         set_style(tr0, "text-align", "center");
-        add_location(tr0, file$1, 7, 8, 337);
+        add_location(tr0, file$1, 7, 8, 163);
         set_style(img, "border-radius", "10%");
         attr_dev(img, "alt", "CopycatLGPE.png");
         if (
@@ -10631,74 +10634,65 @@ var app = (function () {
         )
           attr_dev(img, "src", img_src_value);
         attr_dev(img, "decoding", "async");
-        attr_dev(img, "width", "250");
-        attr_dev(img, "height", "292");
-        add_location(img, file$1, 12, 4, 558);
+        add_location(img, file$1, 12, 4, 384);
         attr_dev(td1, "colspan", "2");
-        add_location(td1, file$1, 11, 3, 537);
+        add_location(td1, file$1, 11, 3, 363);
         set_style(tr1, "text-align", "center");
-        add_location(tr1, file$1, 10, 2, 503);
+        add_location(tr1, file$1, 10, 2, 329);
         set_style(span1, "color", "#000");
-        add_location(span1, file$1, 15, 115, 864);
+        add_location(span1, file$1, 15, 115, 665);
         attr_dev(a0, "href", "/wiki/Gender");
         attr_dev(a0, "title", "Gender");
-        add_location(a0, file$1, 15, 77, 826);
+        add_location(a0, file$1, 15, 77, 627);
         attr_dev(th0, "class", "roundytl roundybl");
         set_style(th0, "text-align", "right");
         set_style(th0, "overflow", "hidden");
-        add_location(th0, file$1, 15, 4, 753);
+        add_location(th0, file$1, 15, 4, 554);
         attr_dev(td2, "class", "roundytr roundybr");
         set_style(td2, "overflow", "hidden");
-        add_location(td2, file$1, 17, 4, 922);
-        add_location(tr2, file$1, 14, 3, 744);
+        add_location(td2, file$1, 17, 4, 723);
+        add_location(tr2, file$1, 14, 3, 545);
         set_style(span2, "color", "#000");
-        add_location(span2, file$1, 20, 49, 1051);
+        add_location(span2, file$1, 20, 49, 852);
         set_style(th1, "text-align", "right");
         set_style(th1, "overflow", "hidden");
-        add_location(th1, file$1, 20, 2, 1004);
+        add_location(th1, file$1, 20, 2, 805);
         set_style(td3, "overflow", "hidden");
-        add_location(td3, file$1, 22, 2, 1103);
-        add_location(tr3, file$1, 19, 1, 997);
+        add_location(td3, file$1, 22, 2, 904);
+        add_location(tr3, file$1, 19, 1, 798);
         set_style(span3, "color", "#000");
-        add_location(span3, file$1, 25, 96, 1256);
+        add_location(span3, file$1, 25, 96, 1057);
         attr_dev(a1, "href", "/wiki/Region");
         attr_dev(a1, "title", "Region");
-        add_location(a1, file$1, 25, 58, 1218);
+        add_location(a1, file$1, 25, 58, 1019);
         attr_dev(th2, "class", "");
         set_style(th2, "text-align", "right");
         set_style(th2, "overflow", "hidden");
-        add_location(th2, file$1, 25, 2, 1162);
+        add_location(th2, file$1, 25, 2, 963);
         attr_dev(td4, "class", "");
         set_style(td4, "overflow", "hidden");
-        add_location(td4, file$1, 27, 2, 1310);
-        add_location(tr4, file$1, 24, 1, 1155);
+        add_location(td4, file$1, 27, 2, 1111);
+        add_location(tr4, file$1, 24, 1, 956);
         set_style(th3, "text-align", "right");
         set_style(th3, "overflow", "hidden");
-        add_location(th3, file$1, 30, 2, 1374);
+        add_location(th3, file$1, 30, 2, 1175);
         set_style(td5, "overflow", "hidden");
-        add_location(td5, file$1, 32, 2, 1442);
-        add_location(tr5, file$1, 29, 1, 1367);
+        add_location(td5, file$1, 32, 2, 1243);
+        add_location(tr5, file$1, 29, 1, 1168);
         set_style(th4, "text-align", "right");
         set_style(th4, "overflow", "hidden");
-        add_location(th4, file$1, 36, 2, 1505);
+        add_location(th4, file$1, 36, 2, 1306);
         set_style(td6, "overflow", "hidden");
-        add_location(td6, file$1, 38, 2, 1574);
-        add_location(tr6, file$1, 35, 1, 1498);
-        add_location(tbody, file$1, 7, 1, 330);
-        set_style(table, "font-size", "1em");
-        set_style(table, "float", "right");
-        set_style(table, "padding", "4em");
-        set_style(table, "background", "lightgoldenrodyellow");
-        set_style(table, "margin-left", "10px");
-        set_style(table, "margin-bottom", "10px");
-        set_style(table, "border", "3px solid #6D6D4E");
-        set_style(table, "border-radius", "100%");
+        add_location(td6, file$1, 38, 2, 1375);
+        add_location(tr6, file$1, 35, 1, 1299);
+        add_location(tbody, file$1, 7, 1, 156);
+        attr_dev(table, "class", "svelte-47m6vy");
         add_location(table, file$1, 6, 0, 147);
         attr_dev(div0, "class", "text-tile");
-        add_location(div0, file$1, 43, 1, 1969);
+        add_location(div0, file$1, 43, 1, 1770);
         attr_dev(div1, "id", "description-section");
-        attr_dev(div1, "class", "svelte-g1vdq4");
-        add_location(div1, file$1, 42, 0, 1937);
+        attr_dev(div1, "class", "svelte-47m6vy");
+        add_location(div1, file$1, 42, 0, 1738);
       },
       l: function claim(nodes) {
         throw new Error(

@@ -10,3 +10,11 @@
 		C291.319,158.182,274.477,140.803,253.73,140.803z"/>
 </g>
 </svg>
+
+<style>
+	@media (max-width: 999px) {
+		svg {
+			transform: scale(.75);
+		}
+	}
+</style>
