@@ -1,37 +1,34 @@
-<script>
-	import projects from './projects.js';
-	import { link } from 'svelte-routing';
-	import Image from './components/Image.svelte';
-</script>
-
 <table>
-	<tbody><tr style="text-align:center">
-			<td colspan="2"><big><big><b>Copycat (Bo)</b></big></big><br><span lang="ja"><b>モノマネむすめ</b></span> <i>Mimic Girl</i>
-		</td></tr>
+	<tbody>
+		<tr style="text-align:center">
+			<td colspan="2"><big><big><b>Copycat (Bo)</b></big></big><br><span lang="ja"><b>モノマネむすめ</b></span> <i>Mimic Girl</i></td>
+		</tr>
 		<tr style="text-align:center">
 			<td colspan="2">
-				<img style="border-radius: 10%" alt="CopycatLGPE.png" src="http://archives.bulbagarden.net/media/upload/e/ea/CopycatLGPE.png" decoding="async">
-			</td></tr>
-			<tr>
-				<th class="roundytl roundybl" style="text-align:right; overflow: hidden"><a href="/wiki/Gender" title="Gender"><span style="color:#000;">Gender</span></a>
-				</th>
-				<td class="roundytr roundybr" style="overflow: hidden">Female
-	</td></tr>
+				<img alt="CopycatLBo.png" id="copycat" src="./assets/bo.jpeg" decoding="async" />
+		</td>
+	</tr>
 	<tr>
-		<th style="text-align:right; overflow: hidden"><span style="color:#000;">Hometown</span>
+		<th class="roundytl roundybl" style="text-align:right; overflow: hidden"><a href="/wiki/Gender" title="Gender"><span style="color:#000;">Gender</span></a>
 		</th>
-		<td style="overflow: hidden">Chinatown
+		<td class="roundytr roundybr" style="overflow: hidden">Female
+	</td>
+</tr>
+<tr>
+	<th style="text-align:right; overflow: hidden"><span style="color:#000;">Hometown</span>
+	</th>
+	<td style="overflow: hidden">???
 	</td></tr>
 	<tr>
 		<th class="" style="text-align:right; overflow: hidden"><a href="/wiki/Region" title="Region"><span style="color:#000;">Region</span></a>
 		</th>
-		<td class="" style="overflow: hidden">Canto
+		<td class="" style="overflow: hidden">Kanto
 	</td></tr>
 	<tr>
 		<th style="text-align:right; overflow: hidden">Generation
 		</th>
 		<td style="overflow: hidden">
-			Millenial
+			???
 	</td></tr>
 	<tr>
 		<th style="text-align:right; overflow: hidden">Description
@@ -46,6 +43,11 @@
 </div>
 
 <style>
+	#copycat {
+		max-height: 30vh;
+		border: none;
+		border-radius: 20%;
+	}
 	#description-section {
 	}
 	table {

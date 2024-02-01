@@ -10296,202 +10296,8 @@ var app = (function () {
     }
   }
 
-  const projects = [
-    {
-      name: "The Sketchbook Project",
-      description:
-        "artwork that calls the Brooklyn Art Library home. my physical sketchbook is currently on tour!",
-      link: "https://www.sketchbookproject.com/library/21991a",
-    },
-    {
-      name: "chananigans",
-      description: "hey don't click this",
-    },
-    {
-      name: "starberry",
-      description:
-        "cHecK oUT mY sOunDCL0ud!! hahA it's ok I guess but it could be better,,,",
-      link: "https://soundcloud.com/capybo",
-    },
-    {
-      name: "Betty",
-      description:
-        "these are completed pages of a repurposed quad notebook that I halved over time. named after a dear friend who is no longer with us.",
-    },
-  ];
-
-  /**
-   * Adapted from https://github.com/reach/router/blob/b60e6dd781d5d3a4bdaaf4de665649c0f6a7e78d/src/lib/history.js
-   *
-   * https://github.com/reach/router/blob/master/LICENSE
-   * */
-
-  function getLocation(source) {
-    return {
-      ...source.location,
-      state: source.history.state,
-      key: (source.history.state && source.history.state.key) || "initial",
-    };
-  }
-
-  function createHistory(source, options) {
-    const listeners = [];
-    let location = getLocation(source);
-
-    return {
-      get location() {
-        return location;
-      },
-
-      listen(listener) {
-        listeners.push(listener);
-
-        const popstateListener = () => {
-          location = getLocation(source);
-          listener({ location, action: "POP" });
-        };
-
-        source.addEventListener("popstate", popstateListener);
-
-        return () => {
-          source.removeEventListener("popstate", popstateListener);
-
-          const index = listeners.indexOf(listener);
-          listeners.splice(index, 1);
-        };
-      },
-
-      navigate(to, { state, replace = false } = {}) {
-        state = { ...state, key: Date.now() + "" };
-        // try...catch iOS Safari limits to 100 pushState calls
-        try {
-          if (replace) {
-            source.history.replaceState(state, null, to);
-          } else {
-            source.history.pushState(state, null, to);
-          }
-        } catch (e) {
-          source.location[replace ? "replace" : "assign"](to);
-        }
-
-        location = getLocation(source);
-        listeners.forEach((listener) => listener({ location, action: "PUSH" }));
-      },
-    };
-  }
-
-  // Stores history entries in memory for testing or other platforms like Native
-  function createMemorySource(initialPathname = "/") {
-    let index = 0;
-    const stack = [{ pathname: initialPathname, search: "" }];
-    const states = [];
-
-    return {
-      get location() {
-        return stack[index];
-      },
-      addEventListener(name, fn) {},
-      removeEventListener(name, fn) {},
-      history: {
-        get entries() {
-          return stack;
-        },
-        get index() {
-          return index;
-        },
-        get state() {
-          return states[index];
-        },
-        pushState(state, _, uri) {
-          const [pathname, search = ""] = uri.split("?");
-          index++;
-          stack.push({ pathname, search });
-          states.push(state);
-        },
-        replaceState(state, _, uri) {
-          const [pathname, search = ""] = uri.split("?");
-          stack[index] = { pathname, search };
-          states[index] = state;
-        },
-      },
-    };
-  }
-
-  // Global history uses window.history as the source if available,
-  // otherwise a memory history
-  const canUseDOM = Boolean(
-    typeof window !== "undefined" &&
-      window.document &&
-      window.document.createElement,
-  );
-  const globalHistory = createHistory(
-    canUseDOM ? window : createMemorySource(),
-  );
-  const { navigate } = globalHistory;
-
-  /**
-   * Adapted from https://github.com/reach/router/blob/b60e6dd781d5d3a4bdaaf4de665649c0f6a7e78d/src/lib/utils.js
-   *
-   * https://github.com/reach/router/blob/master/LICENSE
-   * */
-
-  /**
-   * Decides whether a given `event` should result in a navigation or not.
-   * @param {object} event
-   */
-  function shouldNavigate(event) {
-    return (
-      !event.defaultPrevented &&
-      event.button === 0 &&
-      !(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey)
-    );
-  }
-
-  function hostMatches(anchor) {
-    const host = location.host;
-    return (
-      anchor.host == host ||
-      // svelte seems to kill anchor.host value in ie11, so fall back to checking href
-      anchor.href.indexOf(`https://${host}`) === 0 ||
-      anchor.href.indexOf(`http://${host}`) === 0
-    );
-  }
-
-  /**
-   * A link action that can be added to <a href=""> tags rather
-   * than using the <Link> component.
-   *
-   * Example:
-   * ```html
-   * <a href="/post/{postId}" use:link>{post.title}</a>
-   * ```
-   */
-  function link(node) {
-    function onClick(event) {
-      const anchor = event.currentTarget;
-
-      if (
-        anchor.target === "" &&
-        hostMatches(anchor) &&
-        shouldNavigate(event)
-      ) {
-        event.preventDefault();
-        navigate(anchor.pathname + anchor.search, {
-          replace: anchor.hasAttribute("replace"),
-        });
-      }
-    }
-
-    node.addEventListener("click", onClick);
-
-    return {
-      destroy() {
-        node.removeEventListener("click", onClick);
-      },
-    };
-  }
-
   /* src/Description.svelte generated by Svelte v3.59.2 */
+
   const file$1 = "src/Description.svelte";
 
   function create_fragment$1(ctx) {
@@ -10583,7 +10389,7 @@ var app = (function () {
         span2.textContent = "Hometown";
         t11 = space();
         td3 = element("td");
-        td3.textContent = "Chinatown";
+        td3.textContent = "???";
         t13 = space();
         tr4 = element("tr");
         th2 = element("th");
@@ -10592,14 +10398,14 @@ var app = (function () {
         span3.textContent = "Region";
         t15 = space();
         td4 = element("td");
-        td4.textContent = "Canto";
+        td4.textContent = "Kanto";
         t17 = space();
         tr5 = element("tr");
         th3 = element("th");
         th3.textContent = "Generation";
         t19 = space();
         td5 = element("td");
-        td5.textContent = "Millenial";
+        td5.textContent = "???";
         t21 = space();
         tr6 = element("tr");
         th4 = element("th");
@@ -10611,88 +10417,83 @@ var app = (function () {
         t25 = space();
         div1 = element("div");
         div0 = element("div");
-        add_location(b0, file$1, 8, 29, 223);
-        add_location(big0, file$1, 8, 24, 218);
-        add_location(big1, file$1, 8, 19, 213);
-        add_location(br, file$1, 8, 60, 254);
-        add_location(b1, file$1, 8, 80, 274);
+        add_location(b0, file$1, 3, 29, 79);
+        add_location(big0, file$1, 3, 24, 74);
+        add_location(big1, file$1, 3, 19, 69);
+        add_location(br, file$1, 3, 60, 110);
+        add_location(b1, file$1, 3, 80, 130);
         attr_dev(span0, "lang", "ja");
-        add_location(span0, file$1, 8, 64, 258);
-        add_location(i, file$1, 8, 102, 296);
+        add_location(span0, file$1, 3, 64, 114);
+        add_location(i, file$1, 3, 102, 152);
         attr_dev(td0, "colspan", "2");
-        add_location(td0, file$1, 8, 3, 197);
+        add_location(td0, file$1, 3, 3, 53);
         set_style(tr0, "text-align", "center");
-        add_location(tr0, file$1, 7, 8, 163);
-        set_style(img, "border-radius", "10%");
-        attr_dev(img, "alt", "CopycatLGPE.png");
-        if (
-          !src_url_equal(
-            img.src,
-            (img_src_value =
-              "http://archives.bulbagarden.net/media/upload/e/ea/CopycatLGPE.png"),
-          )
-        )
+        add_location(tr0, file$1, 2, 2, 19);
+        attr_dev(img, "alt", "CopycatLBo.png");
+        attr_dev(img, "id", "copycat");
+        if (!src_url_equal(img.src, (img_src_value = "./assets/bo.jpeg")))
           attr_dev(img, "src", img_src_value);
         attr_dev(img, "decoding", "async");
-        add_location(img, file$1, 12, 4, 384);
+        attr_dev(img, "class", "svelte-345jl0");
+        add_location(img, file$1, 7, 4, 240);
         attr_dev(td1, "colspan", "2");
-        add_location(td1, file$1, 11, 3, 363);
+        add_location(td1, file$1, 6, 3, 219);
         set_style(tr1, "text-align", "center");
-        add_location(tr1, file$1, 10, 2, 329);
+        add_location(tr1, file$1, 5, 2, 185);
         set_style(span1, "color", "#000");
-        add_location(span1, file$1, 15, 115, 665);
+        add_location(span1, file$1, 11, 113, 456);
         attr_dev(a0, "href", "/wiki/Gender");
         attr_dev(a0, "title", "Gender");
-        add_location(a0, file$1, 15, 77, 627);
+        add_location(a0, file$1, 11, 75, 418);
         attr_dev(th0, "class", "roundytl roundybl");
         set_style(th0, "text-align", "right");
         set_style(th0, "overflow", "hidden");
-        add_location(th0, file$1, 15, 4, 554);
+        add_location(th0, file$1, 11, 2, 345);
         attr_dev(td2, "class", "roundytr roundybr");
         set_style(td2, "overflow", "hidden");
-        add_location(td2, file$1, 17, 4, 723);
-        add_location(tr2, file$1, 14, 3, 545);
+        add_location(td2, file$1, 13, 2, 510);
+        add_location(tr2, file$1, 10, 1, 338);
         set_style(span2, "color", "#000");
-        add_location(span2, file$1, 20, 49, 852);
+        add_location(span2, file$1, 17, 48, 638);
         set_style(th1, "text-align", "right");
         set_style(th1, "overflow", "hidden");
-        add_location(th1, file$1, 20, 2, 805);
+        add_location(th1, file$1, 17, 1, 591);
         set_style(td3, "overflow", "hidden");
-        add_location(td3, file$1, 22, 2, 904);
-        add_location(tr3, file$1, 19, 1, 798);
+        add_location(td3, file$1, 19, 1, 688);
+        add_location(tr3, file$1, 16, 0, 585);
         set_style(span3, "color", "#000");
-        add_location(span3, file$1, 25, 96, 1057);
+        add_location(span3, file$1, 22, 96, 835);
         attr_dev(a1, "href", "/wiki/Region");
         attr_dev(a1, "title", "Region");
-        add_location(a1, file$1, 25, 58, 1019);
+        add_location(a1, file$1, 22, 58, 797);
         attr_dev(th2, "class", "");
         set_style(th2, "text-align", "right");
         set_style(th2, "overflow", "hidden");
-        add_location(th2, file$1, 25, 2, 963);
+        add_location(th2, file$1, 22, 2, 741);
         attr_dev(td4, "class", "");
         set_style(td4, "overflow", "hidden");
-        add_location(td4, file$1, 27, 2, 1111);
-        add_location(tr4, file$1, 24, 1, 956);
+        add_location(td4, file$1, 24, 2, 889);
+        add_location(tr4, file$1, 21, 1, 734);
         set_style(th3, "text-align", "right");
         set_style(th3, "overflow", "hidden");
-        add_location(th3, file$1, 30, 2, 1175);
+        add_location(th3, file$1, 27, 2, 953);
         set_style(td5, "overflow", "hidden");
-        add_location(td5, file$1, 32, 2, 1243);
-        add_location(tr5, file$1, 29, 1, 1168);
+        add_location(td5, file$1, 29, 2, 1021);
+        add_location(tr5, file$1, 26, 1, 946);
         set_style(th4, "text-align", "right");
         set_style(th4, "overflow", "hidden");
-        add_location(th4, file$1, 36, 2, 1306);
+        add_location(th4, file$1, 33, 2, 1078);
         set_style(td6, "overflow", "hidden");
-        add_location(td6, file$1, 38, 2, 1375);
-        add_location(tr6, file$1, 35, 1, 1299);
-        add_location(tbody, file$1, 7, 1, 156);
-        attr_dev(table, "class", "svelte-47m6vy");
-        add_location(table, file$1, 6, 0, 147);
+        add_location(td6, file$1, 35, 2, 1147);
+        add_location(tr6, file$1, 32, 1, 1071);
+        add_location(tbody, file$1, 1, 1, 9);
+        attr_dev(table, "class", "svelte-345jl0");
+        add_location(table, file$1, 0, 0, 0);
         attr_dev(div0, "class", "text-tile");
-        add_location(div0, file$1, 43, 1, 1770);
+        add_location(div0, file$1, 40, 1, 1542);
         attr_dev(div1, "id", "description-section");
-        attr_dev(div1, "class", "svelte-47m6vy");
-        add_location(div1, file$1, 42, 0, 1738);
+        attr_dev(div1, "class", "svelte-345jl0");
+        add_location(div1, file$1, 39, 0, 1510);
       },
       l: function claim(nodes) {
         throw new Error(
@@ -10771,7 +10572,7 @@ var app = (function () {
     return block;
   }
 
-  function instance$1($$self, $$props, $$invalidate) {
+  function instance$1($$self, $$props) {
     let { $$slots: slots = {}, $$scope } = $$props;
     validate_slots("Description", slots, []);
     const writable_props = [];
@@ -10785,7 +10586,6 @@ var app = (function () {
         console.warn(`<Description> was created with unknown prop '${key}'`);
     });
 
-    $$self.$capture_state = () => ({ projects, link, Image: Image_1 });
     return [];
   }
 
