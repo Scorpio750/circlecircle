@@ -51,13 +51,12 @@
 	#description-section {
 	}
 	table {
-   font-size: 1em; float: right; padding: 4em; background: lightgoldenrodyellow; margin-left: 10px; margin-bottom: 10px; border: 3px solid #6D6D4E; border-radius: 100%;
+   font-size: 1em; float: right; padding: 4em; background: lightgoldenrodyellow; margin-left: 10px; margin-bottom: 10px; border-radius: 100%;
 	}
 
 	@media (max-width: 999px) {
 		table {
 			padding: 0;
-			border: none;
 		}
 	}
 </style>

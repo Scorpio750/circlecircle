@@ -10068,7 +10068,7 @@ var app = (function () {
         if (!src_url_equal(img.src, (img_src_value = "./assets/bo.jpeg")))
           attr_dev(img, "src", img_src_value);
         attr_dev(img, "decoding", "async");
-        attr_dev(img, "class", "svelte-345jl0");
+        attr_dev(img, "class", "svelte-151ibwb");
         add_location(img, file$1, 7, 4, 240);
         attr_dev(td1, "colspan", "2");
         add_location(td1, file$1, 6, 3, 219);
@@ -10121,12 +10121,12 @@ var app = (function () {
         add_location(td6, file$1, 35, 2, 1147);
         add_location(tr6, file$1, 32, 1, 1071);
         add_location(tbody, file$1, 1, 1, 9);
-        attr_dev(table, "class", "svelte-345jl0");
+        attr_dev(table, "class", "svelte-151ibwb");
         add_location(table, file$1, 0, 0, 0);
         attr_dev(div0, "class", "text-tile");
         add_location(div0, file$1, 40, 1, 1542);
         attr_dev(div1, "id", "description-section");
-        attr_dev(div1, "class", "svelte-345jl0");
+        attr_dev(div1, "class", "svelte-151ibwb");
         add_location(div1, file$1, 39, 0, 1510);
       },
       l: function claim(nodes) {

@@ -50,27 +50,25 @@ footer.svelte-1txh1g6 a.svelte-1txh1g6:hover {
     max-width: 100%;
   }
 }
-#copycat.svelte-345jl0 {
+#copycat.svelte-151ibwb {
   max-height: 30vh;
   border: none;
   border-radius: 20%;
 }
-#description-section.svelte-345jl0 {
+#description-section.svelte-151ibwb {
 }
-table.svelte-345jl0 {
+table.svelte-151ibwb {
   font-size: 1em;
   float: right;
   padding: 4em;
   background: lightgoldenrodyellow;
   margin-left: 10px;
   margin-bottom: 10px;
-  border: 3px solid #6d6d4e;
   border-radius: 100%;
 }
 @media (max-width: 999px) {
-  table.svelte-345jl0 {
+  table.svelte-151ibwb {
     padding: 0;
-    border: none;
   }
 }
 section.svelte-17740xl {
