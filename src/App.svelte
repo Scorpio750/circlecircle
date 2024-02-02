@@ -68,7 +68,7 @@
 		color: grey;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 999px) {
 		:global(body) {
 			padding: 0 10vw;
 		}

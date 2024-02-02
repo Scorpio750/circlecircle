@@ -29,3 +29,9 @@
 			};
 	})
 </script>
+
+<style>
+	img {
+		max-height: 75vh;
+	}
+</style>

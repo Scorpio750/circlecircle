@@ -8955,6 +8955,7 @@ var app = (function () {
         )
           attr_dev(img, "src", img_src_value);
         attr_dev(img, "alt", "Loading...");
+        attr_dev(img, "class", "svelte-1opycov");
         add_location(img, file$7, 5, 1, 181);
       },
       m: function mount(target, anchor) {
@@ -8994,6 +8995,7 @@ var app = (function () {
         )
           attr_dev(img, "src", img_src_value);
         attr_dev(img, "alt", "Not Found");
+        attr_dev(img, "class", "svelte-1opycov");
         add_location(img, file$7, 3, 1, 62);
       },
       m: function mount(target, anchor) {
@@ -9027,6 +9029,7 @@ var app = (function () {
         if (!src_url_equal(img.src, (img_src_value = /*src*/ ctx[0])))
           attr_dev(img, "src", img_src_value);
         attr_dev(img, "alt", "Document");
+        attr_dev(img, "class", "svelte-1opycov");
         add_location(img, file$7, 1, 1, 14);
       },
       m: function mount(target, anchor) {
@@ -9266,7 +9269,7 @@ var app = (function () {
     return block;
   }
 
-  // (15:2) <Carousel    autoplay    autoplayDuration={5000}    arrows={false}    particlesToShow={3}    particlesToScroll={2}   >
+  // (15:2) <Carousel    autoplay    autoplayDuration={5000}    arrows={false}    particlesToShow={1}    particlesToScroll={1}   >
   function create_default_slot(ctx) {
     let each_1_anchor;
     let current;
@@ -9359,7 +9362,7 @@ var app = (function () {
       id: create_default_slot.name,
       type: "slot",
       source:
-        "(15:2) <Carousel    autoplay    autoplayDuration={5000}    arrows={false}    particlesToShow={3}    particlesToScroll={2}   >",
+        "(15:2) <Carousel    autoplay    autoplayDuration={5000}    arrows={false}    particlesToShow={1}    particlesToScroll={1}   >",
       ctx,
     });
 
@@ -9377,8 +9380,8 @@ var app = (function () {
         autoplay: true,
         autoplayDuration: 5000,
         arrows: false,
-        particlesToShow: 3,
-        particlesToScroll: 2,
+        particlesToShow: 1,
+        particlesToScroll: 1,
         $$slots: { default: [create_default_slot] },
         $$scope: { ctx },
       },
@@ -9391,10 +9394,10 @@ var app = (function () {
         div = element("div");
         create_component(carousel.$$.fragment);
         attr_dev(div, "id", "carousel");
-        attr_dev(div, "class", "svelte-8bhmxq");
-        add_location(div, file$6, 13, 1, 393);
+        attr_dev(div, "class", "svelte-hnyz5k");
+        add_location(div, file$6, 13, 1, 389);
         attr_dev(section, "class", "hero");
-        add_location(section, file$6, 12, 0, 369);
+        add_location(section, file$6, 12, 0, 365);
       },
       l: function claim(nodes) {
         throw new Error(
@@ -9446,8 +9449,8 @@ var app = (function () {
     let { $$slots: slots = {}, $$scope } = $$props;
     validate_slots("Portfolio", slots, []);
 
-    const portfolioLinks = new Array(13).fill("").map((_, idx) => {
-      const offset = idx + 3;
+    const portfolioLinks = new Array(12).fill("").map((_, idx) => {
+      const offset = idx;
       const baseIdx = String(offset).padStart(3, "0");
       const baseUrl = "./assets/Portfolio/signal-2024-02-01-171154_";
       return baseUrl + baseIdx + ".jpeg";
@@ -10287,13 +10290,13 @@ var app = (function () {
         add_location(section0, file, 10, 1, 220);
         attr_dev(section1, "id", "right-half");
         add_location(section1, file, 14, 1, 292);
-        attr_dev(main, "class", "svelte-1bty2u4");
+        attr_dev(main, "class", "svelte-1txh1g6");
         add_location(main, file, 9, 0, 212);
         attr_dev(a, "href", "https://syncretik.co");
-        attr_dev(a, "class", "svelte-1bty2u4");
+        attr_dev(a, "class", "svelte-1txh1g6");
         add_location(a, file, 19, 16, 381);
         add_location(span, file, 19, 1, 366);
-        attr_dev(footer, "class", "svelte-1bty2u4");
+        attr_dev(footer, "class", "svelte-1txh1g6");
         add_location(footer, file, 18, 0, 356);
       },
       l: function claim(nodes) {
