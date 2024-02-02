@@ -32,6 +32,6 @@
 
 <style>
 	img {
-		max-height: 75vh;
+		max-height: 64vh;
 	}
 </style>

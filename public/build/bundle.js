@@ -8955,7 +8955,7 @@ var app = (function () {
         )
           attr_dev(img, "src", img_src_value);
         attr_dev(img, "alt", "Loading...");
-        attr_dev(img, "class", "svelte-1opycov");
+        attr_dev(img, "class", "svelte-z792jh");
         add_location(img, file$7, 5, 1, 181);
       },
       m: function mount(target, anchor) {
@@ -8995,7 +8995,7 @@ var app = (function () {
         )
           attr_dev(img, "src", img_src_value);
         attr_dev(img, "alt", "Not Found");
-        attr_dev(img, "class", "svelte-1opycov");
+        attr_dev(img, "class", "svelte-z792jh");
         add_location(img, file$7, 3, 1, 62);
       },
       m: function mount(target, anchor) {
@@ -9029,7 +9029,7 @@ var app = (function () {
         if (!src_url_equal(img.src, (img_src_value = /*src*/ ctx[0])))
           attr_dev(img, "src", img_src_value);
         attr_dev(img, "alt", "Document");
-        attr_dev(img, "class", "svelte-1opycov");
+        attr_dev(img, "class", "svelte-z792jh");
         add_location(img, file$7, 1, 1, 14);
       },
       m: function mount(target, anchor) {
