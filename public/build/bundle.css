@@ -101,8 +101,13 @@ table.svelte-151ibwb {
     transform: scale(0.75);
   }
 }
-img.svelte-z792jh {
+img.svelte-1l03jm {
   max-height: 64vh;
+}
+@media (max-width: 767px) {
+  img.svelte-1l03jm {
+    max-height: 55vh;
+  }
 }
 :root {
   --sc-color-rgb-light-50p: rgba(93, 93, 93, 0.5);

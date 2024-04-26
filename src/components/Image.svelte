@@ -34,4 +34,10 @@
 	img {
 		max-height: 64vh;
 	}
+
+	@media (max-width: 767px) {
+		img {
+			max-height: 55vh;
+		}
+	}
 </style>
