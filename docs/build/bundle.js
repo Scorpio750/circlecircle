@@ -146,8 +146,8 @@ var app = (function () {
     n && n.slice().forEach((t) => t.call(this, e));
   }
   const A = [],
-    E = [];
-  let k = [];
+    k = [];
+  let E = [];
   const z = [],
     F = Promise.resolve();
   let L = !1;
@@ -158,7 +158,7 @@ var app = (function () {
     return D(), F;
   }
   function N(t) {
-    k.push(t);
+    E.push(t);
   }
   const H = new Set();
   let B = 0;
@@ -174,12 +174,12 @@ var app = (function () {
       } catch (t) {
         throw ((A.length = 0), (B = 0), t);
       }
-      for (j(null), A.length = 0, B = 0; E.length; ) E.pop()();
-      for (let t = 0; t < k.length; t += 1) {
-        const e = k[t];
+      for (j(null), A.length = 0, B = 0; k.length; ) k.pop()();
+      for (let t = 0; t < E.length; t += 1) {
+        const e = E[t];
         H.has(e) || (H.add(e), e());
       }
-      k.length = 0;
+      E.length = 0;
     } while (A.length);
     for (; z.length; ) z.pop()();
     (L = !1), H.clear(), j(t);
@@ -239,9 +239,9 @@ var app = (function () {
       (!(function (t) {
         const e = [],
           n = [];
-        k.forEach((r) => (-1 === t.indexOf(r) ? e.push(r) : n.push(r))),
+        E.forEach((r) => (-1 === t.indexOf(r) ? e.push(r) : n.push(r))),
           n.forEach((t) => t()),
-          (k = e);
+          (E = e);
       })(n.after_update),
       r(n.on_destroy),
       n.fragment && n.fragment.d(e),
@@ -743,7 +743,7 @@ var app = (function () {
   function At(t, e) {
     t.removeEventListener("touchend", e);
   }
-  function Et(t) {
+  function kt(t) {
     const e = bt(t);
     let n = 0,
       r = { x: 0, y: 0 };
@@ -781,7 +781,7 @@ var app = (function () {
       }
     );
   }
-  function kt({
+  function Et({
     currentParticleIndex: t,
     particlesCount: e,
     clonesCountHead: n,
@@ -1177,11 +1177,11 @@ var app = (function () {
         fe.call(t) == Gt)
     );
   }
-  var Ee = function (t, e, n) {
+  var ke = function (t, e, n) {
       var r = null == t ? void 0 : xe(t, e);
       return void 0 === r ? n : r;
     },
-    ke = Bt(function (t, e) {
+    Ee = Bt(function (t, e) {
       var n = "__lodash_hash_undefined__",
         r = 9007199254740991,
         o = "[object Arguments]",
@@ -1237,9 +1237,9 @@ var app = (function () {
         A[S] =
           !0),
         (A["[object Error]"] = A[c] = A[y] = !1);
-      var E = "object" == typeof Ht && Ht && Ht.Object === Object && Ht,
-        k = "object" == typeof self && self && self.Object === Object && self,
-        z = E || k || Function("return this")(),
+      var k = "object" == typeof Ht && Ht && Ht.Object === Object && Ht,
+        E = "object" == typeof self && self && self.Object === Object && self,
+        z = k || E || Function("return this")(),
         F = e && !e.nodeType && e,
         L = F && t && !t.nodeType && t,
         D = L && L.exports === F;
@@ -1400,8 +1400,8 @@ var app = (function () {
         var M;
         if ((r && (M = y ? r(t, d, y, O) : r(t)), void 0 !== M)) return M;
         if (!Xt(t)) return t;
-        var E = Vt(t);
-        if (E) {
+        var k = Vt(t);
+        if (k) {
           if (
             ((M = (function (t) {
               var e = t.length,
@@ -1422,15 +1422,15 @@ var app = (function () {
               return e;
             })(t, M);
         } else {
-          var k = Dt(t),
-            z = k == c || k == s;
+          var E = Dt(t),
+            z = E == c || E == s;
           if (Ut(t))
             return (function (t, e) {
               if (e) return t.slice();
               var n = new t.constructor(t.length);
               return t.copy(n), n;
             })(t, e);
-          if (k == f || k == o || (z && !y)) {
+          if (E == f || E == o || (z && !y)) {
             if (B(t)) return y ? t : {};
             if (
               ((M = (function (t) {
@@ -1442,26 +1442,26 @@ var app = (function () {
               !e)
             )
               return (function (t, e) {
-                return kt(t, Lt(t), e);
+                return Et(t, Lt(t), e);
               })(
                 t,
                 (function (t, e) {
-                  return t && kt(e, Yt(e), t);
+                  return t && Et(e, Yt(e), t);
                 })(M, t),
               );
           } else {
-            if (!A[k]) return y ? t : {};
+            if (!A[E]) return y ? t : {};
             M = (function (t, e, n, r) {
               var o = t.constructor;
               switch (e) {
                 case _:
-                  return Et(t);
+                  return kt(t);
                 case a:
                 case i:
                   return new o(+t);
                 case w:
                   return (function (t, e) {
-                    var n = e ? Et(t.buffer) : t.buffer;
+                    var n = e ? kt(t.buffer) : t.buffer;
                     return new t.constructor(n, t.byteOffset, t.byteLength);
                   })(t, r);
                 case m:
@@ -1474,7 +1474,7 @@ var app = (function () {
                 case j:
                 case S:
                   return (function (t, e) {
-                    var n = e ? Et(t.buffer) : t.buffer;
+                    var n = e ? kt(t.buffer) : t.buffer;
                     return new t.constructor(n, t.byteOffset, t.length);
                   })(t, r);
                 case l:
@@ -1499,13 +1499,13 @@ var app = (function () {
                   return (c = t), xt ? Object(xt.call(c)) : {};
               }
               var c;
-            })(t, k, Mt, e);
+            })(t, E, Mt, e);
           }
         }
         O || (O = new jt());
         var F = O.get(t);
         if (F) return F;
-        if ((O.set(t, M), !E))
+        if ((O.set(t, M), !k))
           var L = n
             ? (function (t) {
                 return (function (t, e, n) {
@@ -1540,11 +1540,11 @@ var app = (function () {
         );
         var e;
       }
-      function Et(t) {
+      function kt(t) {
         var e = new t.constructor(t.byteLength);
         return new rt(e).set(new rt(t)), e;
       }
-      function kt(t, e, n, r) {
+      function Et(t, e, n, r) {
         n || (n = {});
         for (var o = -1, a = e.length; ++o < a; ) {
           var i = e[o],
@@ -1813,10 +1813,10 @@ var app = (function () {
             !1);
       var M = "object" == typeof Ht && Ht && Ht.Object === Object && Ht,
         A = "object" == typeof self && self && self.Object === Object && self,
-        E = M || A || Function("return this")(),
-        k = e && !e.nodeType && e,
-        z = k && t && !t.nodeType && t,
-        F = z && z.exports === k,
+        k = M || A || Function("return this")(),
+        E = e && !e.nodeType && e,
+        z = E && t && !t.nodeType && t,
+        F = z && z.exports === E,
         L = F && M.process,
         D = (function () {
           try {
@@ -1854,7 +1854,7 @@ var app = (function () {
         q = Array.prototype,
         U = Function.prototype,
         G = Object.prototype,
-        X = E["__core-js_shared__"],
+        X = k["__core-js_shared__"],
         Y = U.toString,
         K = G.hasOwnProperty,
         J = (function () {
@@ -1872,9 +1872,9 @@ var app = (function () {
               ) +
             "$",
         ),
-        tt = F ? E.Buffer : void 0,
-        et = E.Symbol,
-        nt = E.Uint8Array,
+        tt = F ? k.Buffer : void 0,
+        et = k.Symbol,
+        nt = k.Uint8Array,
         rt = G.propertyIsEnumerable,
         ot = q.splice,
         at = et ? et.toStringTag : void 0,
@@ -1886,11 +1886,11 @@ var app = (function () {
           function (t) {
             return R(V(t));
           }),
-        lt = Lt(E, "DataView"),
-        ut = Lt(E, "Map"),
-        ft = Lt(E, "Promise"),
-        dt = Lt(E, "Set"),
-        pt = Lt(E, "WeakMap"),
+        lt = Lt(k, "DataView"),
+        ut = Lt(k, "Map"),
+        ft = Lt(k, "Promise"),
+        dt = Lt(k, "Set"),
+        pt = Lt(k, "WeakMap"),
         ht = Lt(Object, "create"),
         gt = Bt(lt),
         vt = Bt(ut),
@@ -2005,7 +2005,7 @@ var app = (function () {
                   return (
                     d || (d = new Tt()),
                     p || Jt(t)
-                      ? kt(t, e, n, a, s, d)
+                      ? Et(t, e, n, a, s, d)
                       : (function (t, e, n, a, i, c, s) {
                           switch (n) {
                             case j:
@@ -2038,7 +2038,7 @@ var app = (function () {
                               var v = s.get(t);
                               if (v) return v == e;
                               (a |= o), s.set(t, e);
-                              var y = kt(d(t), d(e), a, i, c, s);
+                              var y = Et(d(t), d(e), a, i, c, s);
                               return s.delete(t), y;
                             case x:
                               if (bt) return bt.call(t) == bt.call(e);
@@ -2114,7 +2114,7 @@ var app = (function () {
           ) && (Gt(t) ? Z : S).test(Bt(t))
         );
       }
-      function Et(t) {
+      function kt(t) {
         if (
           ((n = (e = t) && e.constructor),
           (r = ("function" == typeof n && n.prototype) || G),
@@ -2129,7 +2129,7 @@ var app = (function () {
           K.call(t, a) && "constructor" != a && o.push(a);
         return o;
       }
-      function kt(t, e, n, a, i, c) {
+      function Et(t, e, n, a, i, c) {
         var s = n & r,
           l = t.length,
           u = e.length;
@@ -2414,7 +2414,7 @@ var app = (function () {
             return Kt(t) && Xt(t.length) && !!O[It(t)];
           };
       function Qt(t) {
-        return null != (e = t) && Xt(e.length) && !Gt(e) ? jt(t) : Et(t);
+        return null != (e = t) && Xt(e.length) && !Gt(e) ? jt(t) : kt(t);
         var e;
       }
       t.exports = function (t, e) {
@@ -2462,10 +2462,10 @@ var app = (function () {
       };
     };
   function De(t, e) {
-    const n = Ee(t, "data", {}),
-      r = Ee(t, "watch", {}),
-      o = Ee(t, "methods", {}),
-      a = Ee(e, "onChange", () => {}),
+    const n = ke(t, "data", {}),
+      r = ke(t, "watch", {}),
+      o = ke(t, "methods", {}),
+      a = ke(e, "onChange", () => {}),
       { subscribe: i, notify: c, subscribers: s } = Fe(),
       { targetWatcher: l, getTarget: u } = Le();
     let f;
@@ -2483,7 +2483,7 @@ var app = (function () {
         })),
         Object.defineProperty(d[t], "name", { value: t });
     }),
-      (f = new Proxy(ke(n), {
+      (f = new Proxy(Ee(n), {
         get(t, e) {
           return (
             u() && !h && i(u(), { prop: e, value: t[e] }),
@@ -2630,7 +2630,7 @@ var app = (function () {
               }).particleIndexes;
             },
             setCurrentPageIndex({ data: t }) {
-              t.currentPageIndex = kt({
+              t.currentPageIndex = Et({
                 currentParticleIndex: t.currentParticleIndex,
                 particlesCount: t.particlesCount,
                 clonesCountHead: t.clonesCountHead,
@@ -3080,7 +3080,7 @@ var app = (function () {
       O = l(I, t, t[36], Ge);
     let M = t[3] && Je(t),
       A = t[1] && Qe(t),
-      E = t[4] && Ze(t);
+      k = t[4] && Ze(t);
     return {
       c() {
         (e = _("div")),
@@ -3095,7 +3095,7 @@ var app = (function () {
           (w = b()),
           A && A.c(),
           (m = b()),
-          E && E.c(),
+          k && k.c(),
           C(c, "class", "sc-carousel__pages-container svelte-uwo0yk"),
           P(c, "transform", "translateX(" + t[8] + "px)"),
           P(c, "transition-duration", t[9] + "ms"),
@@ -3119,7 +3119,7 @@ var app = (function () {
           g(n, w),
           A && A.m(n, null),
           g(e, m),
-          E && E.m(e, null),
+          k && k.m(e, null),
           ($ = !0),
           T ||
             ((j = [
@@ -3131,7 +3131,7 @@ var app = (function () {
               x(c, "swipeThresholdReached", t[17]),
               h(It.call(null, i)),
               x(i, "hovered", t[21]),
-              h(Et.call(null, i)),
+              h(kt.call(null, i)),
               x(i, "tapped", t[22]),
             ]),
             (T = !0));
@@ -3179,21 +3179,21 @@ var app = (function () {
               }),
               X()),
           t[4]
-            ? E
-              ? (E.p(t, r), 16 & r[0] && Y(E, 1))
-              : ((E = Ze(t)), E.c(), Y(E, 1), E.m(e, null))
-            : E &&
+            ? k
+              ? (k.p(t, r), 16 & r[0] && Y(k, 1))
+              : ((k = Ze(t)), k.c(), Y(k, 1), k.m(e, null))
+            : k &&
               (G(),
-              K(E, 1, 1, () => {
-                E = null;
+              K(k, 1, 1, () => {
+                k = null;
               }),
               X());
       },
       i(t) {
-        $ || (Y(S), Y(O, t), Y(M), Y(A), Y(E), ($ = !0));
+        $ || (Y(S), Y(O, t), Y(M), Y(A), Y(k), ($ = !0));
       },
       o(t) {
-        K(S), K(O, t), K(M), K(A), K(E), ($ = !1);
+        K(S), K(O, t), K(M), K(A), K(k), ($ = !1);
       },
       d(n) {
         n && y(e),
@@ -3203,7 +3203,7 @@ var app = (function () {
           M && M.d(),
           t[40](null),
           A && A.d(),
-          E && E.d(),
+          k && k.d(),
           (T = !1),
           r(j);
       },
@@ -3242,7 +3242,7 @@ var app = (function () {
       { swiping: j = !0 } = e,
       { particlesToShow: M = 1 } = e,
       { particlesToScroll: A = 1 } = e;
-    let k,
+    let E,
       z,
       F = 0;
     const L =
@@ -3270,7 +3270,7 @@ var app = (function () {
       (async () => {
         await W(),
           z &&
-            k &&
+            E &&
             ((f.particlesCountWithoutClones = z.children.length),
             await W(),
             f.infinite &&
@@ -3307,7 +3307,7 @@ var app = (function () {
               })(),
             (f.particlesCount = z.children.length),
             p.showPage(w, { animated: !1 }),
-            L.observe(k));
+            L.observe(E));
       })();
     }),
       (N = () => {
@@ -3357,7 +3357,7 @@ var app = (function () {
         l,
         u,
         F,
-        k,
+        E,
         z,
         p,
         H,
@@ -3415,13 +3415,13 @@ var app = (function () {
         a,
         () => F / 3,
         function (t) {
-          E[t ? "unshift" : "push"](() => {
+          k[t ? "unshift" : "push"](() => {
             (z = t), n(13, z);
           });
         },
         function (t) {
-          E[t ? "unshift" : "push"](() => {
-            (k = t), n(12, k);
+          k[t ? "unshift" : "push"](() => {
+            (E = t), n(12, E);
           });
         },
         (t) => H(t.detail),
@@ -3945,12 +3945,16 @@ var app = (function () {
             C(r, "class", "svelte-xpo61g"),
             C(i, "class", "social-link"),
             C(i, "href", "https://www.instagram.com/copy____cat___/"),
+            C(i, "target", "_blank"),
             C(l, "class", "social-link"),
             C(l, "href", "https://www.facebook.com/facebo/"),
+            C(l, "target", "_blank"),
             C(d, "class", "social-link"),
             C(d, "href", "https://soundcloud.com/capybo"),
+            C(d, "target", "_blank"),
             C(w, "class", "social-link"),
             C(w, "href", "https://paypal.me/circlecirclestudio"),
+            C(w, "target", "_blank"),
             C(a, "id", "social-links"),
             C(a, "class", "svelte-xpo61g"),
             C(n, "class", "svelte-xpo61g");

@@ -54,15 +54,6 @@ h1.svelte-xpo61g {
     flex-wrap: wrap;
   }
 }
-#carousel.svelte-hnyz5k {
-  max-width: 29vw;
-  box-shadow: -16px 10px 10px goldenrod;
-}
-@media (max-width: 999px) {
-  #carousel.svelte-hnyz5k {
-    max-width: 100%;
-  }
-}
 #copycat.svelte-m7wq3w {
   max-height: 30vh;
   border: none;
@@ -86,6 +77,15 @@ table.svelte-m7wq3w {
   }
   .bulbapedia.svelte-m7wq3w {
     display: none;
+  }
+}
+#carousel.svelte-hnyz5k {
+  max-width: 29vw;
+  box-shadow: -16px 10px 10px goldenrod;
+}
+@media (max-width: 999px) {
+  #carousel.svelte-hnyz5k {
+    max-width: 100%;
   }
 }
 @media (max-width: 999px) {
@@ -166,10 +166,6 @@ img.svelte-1l03jm {
 .sc-carousel-button:focus {
   outline: 5px auto;
 }
-.sc-carousel-progress__indicator.svelte-nuyenl {
-  height: 100%;
-  background-color: var(--sc-color-hex-dark-50p);
-}
 .sc-carousel-dots__container.svelte-1oj5bge {
   display: flex;
   align-items: center;
@@ -219,6 +215,10 @@ img.svelte-1l03jm {
 .sc-carousel-arrow__circle_disabled.svelte-9ztt4p,
 .sc-carousel-arrow__circle_disabled.svelte-9ztt4p:hover {
   opacity: 0.5;
+}
+.sc-carousel-progress__indicator.svelte-nuyenl {
+  height: 100%;
+  background-color: var(--sc-color-hex-dark-50p);
 }
 :root {
   --sc-dot-size: 6px;
