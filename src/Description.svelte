@@ -33,7 +33,7 @@
 	<tr>
 		<th style="text-align:right; overflow: hidden">Description
 		</th>
-		<td style="overflow: hidden">
+		<td id="copy" style="overflow: hidden">
 			Bo is a mixed media artist from New York City. Her works are based on the flow and folding of time, the forgotten feelings and thoughts of the moments gone by. She draws inspiration from organic forms found within nature, in addition to the temporality of street art and the buildings they belong to.
 	</td></tr>
 </tbody></table>
@@ -51,7 +51,14 @@
 	#description-section {
 	}
 	table {
-   font-size: 1em; float: right; padding: 4em; background: lightgoldenrodyellow; margin-left: 10px; margin-bottom: 10px; border-radius: 100%;
+		font-size: 1em;
+		float: right;
+		padding: 4em;
+		background: lightgoldenrodyellow;
+		margin-left: 10px;
+		margin-bottom: 10px;
+		border-radius: 100%;
+		box-shadow: rgba(0, 0, 0, 0.2) 20px 2px 5px 0px;
 	}
 
 	@media (max-width: 999px) {

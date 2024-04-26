@@ -65,14 +65,14 @@ h1.svelte-xpo61g {
     max-width: 100%;
   }
 }
-#copycat.svelte-151ibwb {
+#copycat.svelte-fmva2u {
   max-height: 30vh;
   border: none;
   border-radius: 20%;
 }
-#description-section.svelte-151ibwb {
+#description-section.svelte-fmva2u {
 }
-table.svelte-151ibwb {
+table.svelte-fmva2u {
   font-size: 1em;
   float: right;
   padding: 4em;
@@ -80,9 +80,10 @@ table.svelte-151ibwb {
   margin-left: 10px;
   margin-bottom: 10px;
   border-radius: 100%;
+  box-shadow: rgba(0, 0, 0, 0.2) 20px 2px 5px 0px;
 }
 @media (max-width: 999px) {
-  table.svelte-151ibwb {
+  table.svelte-fmva2u {
     padding: 0;
   }
 }
