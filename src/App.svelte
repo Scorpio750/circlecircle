@@ -3,7 +3,6 @@
 	import SocialLinks from './SocialLinks.svelte';
 	import Description from './Description.svelte';
 </script>
-
 <header>
 	<h1>circlecircle.studio</h1>
 </header>

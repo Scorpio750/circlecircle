@@ -10115,7 +10115,10 @@ var app = (function () {
     let th4;
     let t23;
     let td6;
+    let p0;
     let t25;
+    let p1;
+    let t27;
     let div1;
     let div0;
 
@@ -10179,9 +10182,14 @@ var app = (function () {
         th4.textContent = "Description";
         t23 = space();
         td6 = element("td");
-        td6.textContent =
-          "Bo is a mixed media artist from New York City. Her works are based on the flow and folding of time, the forgotten feelings and thoughts of the moments gone by. She draws inspiration from organic forms found within nature, in addition to the temporality of street art and the buildings they belong to.";
+        p0 = element("p");
+        p0.textContent =
+          "Bo is a mixed media artist from New York City. Her works are based on the flow and folding of time, the forgotten feelings and thoughts of the moments gone by.";
         t25 = space();
+        p1 = element("p");
+        p1.textContent =
+          "She draws inspiration from organic forms found within nature, in addition to the temporality of street art and the buildings they belong to.";
+        t27 = space();
         div1 = element("div");
         div0 = element("div");
         add_location(b0, file$1, 3, 29, 79);
@@ -10201,67 +10209,74 @@ var app = (function () {
         if (!src_url_equal(img.src, (img_src_value = "./assets/bo.jpeg")))
           attr_dev(img, "src", img_src_value);
         attr_dev(img, "decoding", "async");
-        attr_dev(img, "class", "svelte-fmva2u");
+        attr_dev(img, "class", "svelte-m7wq3w");
         add_location(img, file$1, 7, 4, 240);
         attr_dev(td1, "colspan", "2");
         add_location(td1, file$1, 6, 3, 219);
         set_style(tr1, "text-align", "center");
         add_location(tr1, file$1, 5, 2, 185);
         set_style(span1, "color", "#000");
-        add_location(span1, file$1, 11, 113, 456);
+        add_location(span1, file$1, 11, 114, 479);
         attr_dev(a0, "href", "/wiki/Gender");
         attr_dev(a0, "title", "Gender");
-        add_location(a0, file$1, 11, 75, 418);
+        add_location(a0, file$1, 11, 76, 441);
         attr_dev(th0, "class", "roundytl roundybl");
         set_style(th0, "text-align", "right");
         set_style(th0, "overflow", "hidden");
-        add_location(th0, file$1, 11, 2, 345);
+        add_location(th0, file$1, 11, 3, 368);
         attr_dev(td2, "class", "roundytr roundybr");
         set_style(td2, "overflow", "hidden");
-        add_location(td2, file$1, 13, 2, 510);
-        add_location(tr2, file$1, 10, 1, 338);
+        add_location(td2, file$1, 13, 3, 535);
+        attr_dev(tr2, "class", "bulbapedia svelte-m7wq3w");
+        add_location(tr2, file$1, 10, 2, 341);
         set_style(span2, "color", "#000");
-        add_location(span2, file$1, 17, 48, 638);
+        add_location(span2, file$1, 17, 50, 690);
         set_style(th1, "text-align", "right");
         set_style(th1, "overflow", "hidden");
-        add_location(th1, file$1, 17, 1, 591);
+        add_location(th1, file$1, 17, 3, 643);
         set_style(td3, "overflow", "hidden");
-        add_location(td3, file$1, 19, 1, 688);
-        add_location(tr3, file$1, 16, 0, 585);
+        add_location(td3, file$1, 19, 3, 744);
+        attr_dev(tr3, "class", "bulbapedia svelte-m7wq3w");
+        add_location(tr3, file$1, 16, 2, 616);
         set_style(span3, "color", "#000");
-        add_location(span3, file$1, 22, 96, 835);
+        add_location(span3, file$1, 22, 97, 913);
         attr_dev(a1, "href", "/wiki/Region");
         attr_dev(a1, "title", "Region");
-        add_location(a1, file$1, 22, 58, 797);
+        add_location(a1, file$1, 22, 59, 875);
         attr_dev(th2, "class", "");
         set_style(th2, "text-align", "right");
         set_style(th2, "overflow", "hidden");
-        add_location(th2, file$1, 22, 2, 741);
+        add_location(th2, file$1, 22, 3, 819);
         attr_dev(td4, "class", "");
         set_style(td4, "overflow", "hidden");
-        add_location(td4, file$1, 24, 2, 889);
-        add_location(tr4, file$1, 21, 1, 734);
+        add_location(td4, file$1, 24, 3, 969);
+        attr_dev(tr4, "class", "bulbapedia svelte-m7wq3w");
+        add_location(tr4, file$1, 21, 2, 792);
         set_style(th3, "text-align", "right");
         set_style(th3, "overflow", "hidden");
-        add_location(th3, file$1, 27, 2, 953);
+        add_location(th3, file$1, 27, 3, 1055);
         set_style(td5, "overflow", "hidden");
-        add_location(td5, file$1, 29, 2, 1021);
-        add_location(tr5, file$1, 26, 1, 946);
+        add_location(td5, file$1, 28, 3, 1121);
+        attr_dev(tr5, "class", "bulbapedia svelte-m7wq3w");
+        add_location(tr5, file$1, 26, 2, 1028);
+        attr_dev(th4, "class", "bulbapedia svelte-m7wq3w");
         set_style(th4, "text-align", "right");
         set_style(th4, "overflow", "hidden");
-        add_location(th4, file$1, 33, 2, 1078);
+        add_location(th4, file$1, 31, 3, 1179);
+        add_location(p0, file$1, 34, 4, 1313);
+        add_location(p1, file$1, 35, 4, 1484);
         attr_dev(td6, "id", "copy");
         set_style(td6, "overflow", "hidden");
-        add_location(td6, file$1, 35, 2, 1147);
-        add_location(tr6, file$1, 32, 1, 1071);
+        add_location(td6, file$1, 33, 3, 1269);
+        add_location(tr6, file$1, 30, 2, 1171);
         add_location(tbody, file$1, 1, 1, 9);
-        attr_dev(table, "class", "svelte-fmva2u");
+        attr_dev(table, "class", "svelte-m7wq3w");
         add_location(table, file$1, 0, 0, 0);
         attr_dev(div0, "class", "text-tile");
-        add_location(div0, file$1, 40, 1, 1552);
+        add_location(div0, file$1, 40, 2, 1701);
         attr_dev(div1, "id", "description-section");
-        attr_dev(div1, "class", "svelte-fmva2u");
-        add_location(div1, file$1, 39, 0, 1520);
+        attr_dev(div1, "class", "svelte-m7wq3w");
+        add_location(div1, file$1, 39, 1, 1668);
       },
       l: function claim(nodes) {
         throw new Error(
@@ -10315,7 +10330,10 @@ var app = (function () {
         append_dev(tr6, th4);
         append_dev(tr6, t23);
         append_dev(tr6, td6);
-        insert_dev(target, t25, anchor);
+        append_dev(td6, p0);
+        append_dev(td6, t25);
+        append_dev(td6, p1);
+        insert_dev(target, t27, anchor);
         insert_dev(target, div1, anchor);
         append_dev(div1, div0);
       },
@@ -10324,7 +10342,7 @@ var app = (function () {
       o: noop,
       d: function destroy(detaching) {
         if (detaching) detach_dev(table);
-        if (detaching) detach_dev(t25);
+        if (detaching) detach_dev(t27);
         if (detaching) detach_dev(div1);
       },
     };
@@ -10418,20 +10436,20 @@ var app = (function () {
         a = element("a");
         a.textContent = "[Syncretik]";
         t7 = text(" 2024, All Rights Reserved.");
-        add_location(h1, file, 7, 1, 173);
-        add_location(header, file, 6, 0, 163);
+        add_location(h1, file, 6, 1, 172);
+        add_location(header, file, 5, 0, 162);
         attr_dev(section0, "id", "left-half");
-        add_location(section0, file, 10, 1, 220);
+        add_location(section0, file, 9, 1, 219);
         attr_dev(section1, "id", "right-half");
-        add_location(section1, file, 14, 1, 292);
+        add_location(section1, file, 13, 1, 291);
         attr_dev(main, "class", "svelte-1txh1g6");
-        add_location(main, file, 9, 0, 212);
+        add_location(main, file, 8, 0, 211);
         attr_dev(a, "href", "https://syncretik.co");
         attr_dev(a, "class", "svelte-1txh1g6");
-        add_location(a, file, 19, 16, 381);
-        add_location(span, file, 19, 1, 366);
+        add_location(a, file, 18, 16, 380);
+        add_location(span, file, 18, 1, 365);
         attr_dev(footer, "class", "svelte-1txh1g6");
-        add_location(footer, file, 18, 0, 356);
+        add_location(footer, file, 17, 0, 355);
       },
       l: function claim(nodes) {
         throw new Error(

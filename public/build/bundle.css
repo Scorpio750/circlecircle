@@ -65,26 +65,31 @@ h1.svelte-xpo61g {
     max-width: 100%;
   }
 }
-#copycat.svelte-fmva2u {
+#copycat.svelte-m7wq3w {
   max-height: 30vh;
   border: none;
   border-radius: 20%;
 }
-#description-section.svelte-fmva2u {
+#description-section.svelte-m7wq3w {
 }
-table.svelte-fmva2u {
+table.svelte-m7wq3w {
   font-size: 1em;
   float: right;
   padding: 4em;
+  font-style: italic;
   background: lightgoldenrodyellow;
   margin-left: 10px;
   margin-bottom: 10px;
   border-radius: 100%;
   box-shadow: rgba(0, 0, 0, 0.2) 20px 2px 5px 0px;
 }
-@media (max-width: 999px) {
-  table.svelte-fmva2u {
+@media (max-width: 768px) {
+  table.svelte-m7wq3w {
     padding: 0;
+    font-size: 1.5rem;
+  }
+  .bulbapedia.svelte-m7wq3w {
+    display: none;
   }
 }
 @media (max-width: 999px) {
