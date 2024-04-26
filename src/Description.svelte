@@ -43,11 +43,10 @@
 	</div>
 
 <style>
-	#copycat { max-height: 30vh;
+	#copycat {
+		max-height: 30vh;
 		border: none;
 		border-radius: 20%;
-	}
-	#description-section {
 	}
 	table {
 		font-size: 1em;
@@ -62,9 +61,14 @@
 	}
 
 	@media (max-width: 768px) {
+		#copycat {
+			max-height: 42vh;
+		}
 		table {
 			padding: 0;
 			font-size: 1.5rem;
+			margin: 0;
+			box-shadow: none;
 		}
 		.bulbapedia {
 			display: none;
